@@ -1,0 +1,171 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+
+/* Settings styles */
+.settingsContainer {
+    margin: 100px 200px;
+}
+
+.settingsWarning {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.settingsWarning p {
+    margin-left: 5px;
+}
+
+.redExclamationPoint {
+    background-color: var(--danger);
+    color: var(--white);
+    border-radius: 10px;
+    margin: 0;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+.graySettingsButton {
+    height: auto;
+    width: 100px;
+    border: solid var(--neutral) 1px;
+    border-radius: 10px;
+    padding: 3px 5px;
+    margin: 5px 5px 5px 0;
+    background-color: var(--neutral);
+    color: var(--black);
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.graySettingsButton:hover {
+    background-color: var(--button);
+    color: var(--white);
+}
+
+.settingsDetails {
+    margin: 0 25px;
+}
+
+.settingsSubContainers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingsSubContainers p, .settingsSubContainers h3{
+    margin: 5px 0;
+}
+
+.editSettingsButton {
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 10px;
+    height: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid var(--white);
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.editSettingsButton:hover {
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.deleteAccountButton {
+    background-color: var(--danger);
+    color: var(--white);
+    border-radius: 10px;
+    height: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid var(--white);
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.deleteAccountButton:hover {
+    border: 2px solid var(--danger);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.deactivateAccountButton {
+    background-color: var(--white);
+    border-radius: 10px;
+    height: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid var(--danger);
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.deactivateAccountButton:hover {
+    background-color: var(--danger);
+    color: var(--white);
+}
+/* Settings styles */
+
+
+
+
+
+

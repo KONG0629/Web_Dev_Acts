@@ -1,0 +1,224 @@
+/*editProfile.css*/
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+
+/* Style for content */
+.content {
+    margin: 200px 250px 50px 250px;
+    display: flex;
+    background-color: var(--secondary);
+    align-items: stretch;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content .leftstyle {
+    color: var(--white);
+    font-family: "Inter";
+    padding: 10px 20px;
+    flex: 1;
+}
+
+.content .leftstyle span {
+    font-size: 15px;
+    margin: 20px 20px 100px 20px;
+}
+
+.content .leftstyle h1 {
+    font-size: 18px;
+    margin: 20px 20px 100px 20px;
+}
+
+.content .leftstyle .label {
+    padding: 20px 60px;
+}
+
+.content .leftstyle .label input,
+.content .leftstyle .label textarea {
+    border: 2px solid var(--button);
+    background-color: var(--button);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+}
+
+.content .rightstyle {
+    padding: 0px;
+    display: flex;
+}
+
+.content .rightstyle img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin: 20px 0px 20px 100px;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.circle img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.circle .edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #007bff;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.circle:hover .edit-icon {
+    display: block; /* Show on hover */
+}
+
+.circle .edit-icon:hover {
+    background: #0056b3;
+    transform: scale(1.2);
+}
+
+
+
+/* Style for navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 50px 0px;
+}
+
+.nav-buttons button {
+    background-color: var(--neutral);
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: var(--secondary);
+}
+
+/* Responsive styling */
+@media (max-width: 850px) {
+    .content {
+        margin: 50px 20px;
+        flex-direction: column;
+    }
+    
+    .content .leftstyle, .content .rightstyle {
+        width: 100%;
+    }
+}
+
+/*style for content*/
+
+
+/*for responsive*/
+@media (max-width: 1270px){
+    .content{
+        margin: 50px 20px;
+    }
+}
+
+@media (max-width: 850px){
+    .content{
+        flex-direction: column;
+        margin: 50px 20px;
+    }
+
+    .content .leftstyle, .content .rightstyle {
+        width: 100%; 
+    }
+    
+}
+
+
+
+.buttonSub {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.sub{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--neutral);
+}
+
+
+
+
+
+

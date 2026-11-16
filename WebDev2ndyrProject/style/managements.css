@@ -1,0 +1,352 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+
+/* Management styles */
+.management {
+    margin: 100px 18%;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.userDetails {
+    background-color:var(--black);
+    border: solid var(--button) 5px;
+    border-radius: 10px;
+    color: var(--white);
+    width: 1000px;
+}
+
+.userImageName {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.userImageName img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.usernameHeader p {
+    font-size: 24px;
+    padding: 4px 20px;
+}
+
+.numericalContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20% 20px;
+}
+
+.numericalDetails {
+    font-size: 14px;
+    font-weight: lighter;
+    color: var(--white);
+}
+
+.numericalHighlight {
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.profileSecurity {
+    width: 18%;
+}
+
+.bigButton1 {
+    background-color: var(--black);
+    border: solid var(--button) 5px;
+    border-radius: 10px;
+    color: var(--white);
+    width: 150px;
+    margin: 0px 0px 15px 15px;
+    padding: 22px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bigButton2 {
+    background-color: var(--black);
+    border: solid var(--button) 5px;
+    border-radius: 10px;
+    color: var(--white);
+    width: 150px;
+    margin: 15px 0px 0px 15px;
+    padding: 22px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bigButton1 i, .bigButton2 i {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.settingsWarning {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.settingsWarning p {
+    margin-left: 10px;
+}
+
+.redExclamationPoint {
+    background-color: var(--danger);
+    color: var(--white);
+    border-radius: 10px;
+    margin: 0;
+    width: 40px;
+    height: 35px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.managementFunctions {
+    display: flex;
+    height: auto;
+    margin: 5px 0;
+}
+
+.mainFunctions, .subFunctions {
+    display: flex;
+}
+
+.navigationButton {
+    height: auto;
+    width: auto;
+    border: solid var(--black) 1px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    background-color: white;
+    color: var(--black);
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.smallNavigationButton {
+    height: auto;
+    width: auto;
+    border: solid var(--black) 1px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigationButton:hover, .smallNavigationButton:hover {
+    background-color: var(--button);
+    color: var(--white);
+}
+
+.redDot {
+    color: var(--danger);
+}
+
+.postContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    border: solid var(--button) 5px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: var(--white);
+}
+
+.postTextContainer {
+    padding: 10px 0 10px 10px;
+}
+
+.postTextContainer p {
+    margin: 10px 0 10px 10px;
+}
+
+.postContainer .postTitle {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.postContainer .postTitle a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.postContainer .postTitle a:hover {
+    color: #83b4ff;
+}
+
+.interractiveIcons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 200px;
+    margin: 20px;
+}
+
+.blueIcons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--button);
+    font-size: 20px;
+}
+
+.redIcons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--danger);
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.blueIcons p, .redIcons i {
+    cursor: pointer;
+}
+/* Management styles */
+
+/* Management responsiveness */
+@media (max-width: 1200px) {
+    .profile {
+        display: block;
+    }
+
+    .profileSecurity {
+        display: flex;
+        width: 100%;
+    }
+
+    .bigButton1, .bigButton2 {
+        padding: 20px;
+    }
+
+    .bigButton1 {
+        margin: 20px 5px 0 0;
+    }
+
+    .bigButton2 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .userImageName {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0 0 0;
+    }
+
+    .numericalContainer {
+        padding: 10px 40px;
+    }
+
+    .numericalDetails {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .managementFunctions {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .numericalContainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .profileSecurity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bigButton1, .bigButton2 {
+        margin: 10px 0;
+    }
+
+    .navigationButton {
+        margin: 5px 10px;
+    }
+
+    .mainFunctions, .subFunctions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Management responsiveness */
+
+
+
+
+
+
+
+

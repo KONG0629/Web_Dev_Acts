@@ -1,0 +1,251 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+
+/* About Contents Design */
+.blue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    background-color: var(--primary);
+}
+
+.centering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1250px;
+    height: auto;
+}
+
+.centering-container h1 {
+    font-size: 48px;
+    color: var(--white);
+    margin: 100px;
+}
+
+.logo-and-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+
+.logo-and-name img {
+    width: 300px;
+    height: auto;
+}
+
+.logo-and-name h1 {
+    font-size: 24px;
+    color: var(--white);
+    margin: 0;
+    line-height: 2;
+}
+
+.containerBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 750px;
+}
+
+.marginalized-container {
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.marginalized-container h1 {
+    margin-bottom: 30px;
+}
+
+.marginalized-container p{
+    text-align: justify;
+}
+
+.containerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.containerImage img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.containerText {
+    padding: 0 40px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.containerText h1 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--black);
+}
+
+.containerText p {
+    padding: 20px 0;
+    font-family: "Inter";
+    font-weight: lighter;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.learn-container {
+    text-align: center;
+    max-width: 500px;
+    margin-bottom: 50px;
+    margin-left: 125px;
+}
+
+.learn {
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.learn:hover {
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+/*3rd content*/
+
+
+
+/* Responsive layout for smaller screens 3rd content */
+@media (max-width: 850px) {
+    .containerContent {
+        flex-direction: column; 
+        margin: 0 5% 50px 5%; 
+        align-items: center;
+    }
+    .containerContentRight {
+        flex-direction: column-reverse; 
+        margin: 0 5% 50px 5%; 
+        align-items: center;
+    }
+
+    .containerImageLeft, .containerImageRight {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px; 
+    }
+
+    .right .containerText .containerImageRight{
+        flex-direction: column-reverse; 
+    }
+
+
+    .containerImageLeft img,
+    .containerImageRight img {
+        width: 90%; 
+        max-width: 300px;
+        transform: rotate(0deg);
+    }
+
+    .containerText {
+        padding: 0 20px; 
+        text-align: center; 
+        line-height: 1.5;
+    }
+
+    .containerText h1 {
+        font-size: 28px; 
+    }
+
+    .containerText p {
+        font-size: 14px;
+    }
+
+    .containerText .content-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+/* Responsive layout for smaller screens 3rd content */
+/* About Contents Design */
+
+/* About Contents Responsiveness */
+@media (max-width: 992px) {
+    .centering-container {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .centering-container h1,
+    .logo-and-name {
+        margin: 5px;
+        text-align: center;
+    }
+}
+/* About Contents Responsiveness */
+
+
+
+
+

@@ -1,0 +1,96 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+* {
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.draft-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 100px;
+}
+
+.return-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.return-btn:hover {
+    color: rgba(90, 114, 160, 1.0);
+}
+
+.return-btn i {
+    margin-right: 10px;
+}
+
+.profile {
+    display: flex;
+    height: 80px;
+    margin: 20px 0;
+}
+
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.profile .details p {
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.profile .details h1 {
+    font-size: 40px;
+}
+
+table {
+    font-family: "Inter";
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

@@ -1,0 +1,276 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+
+
+/*contentSignup style*/
+
+.contentSignup{
+    margin: 200px;
+    display: flex;
+    background-color: var(--secondary);
+    align-items: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contentSignup .leftsign {
+    flex: 1;
+    display: flex;
+    position: relative; /* Ensure images are stacked properly */
+    overflow: hidden; /* Prevent overflow from images */
+}
+
+.contentSignup .leftsign img {
+    width: 90%; /* Adjust the size as per your design */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain the aspect ratio */
+    border-radius: 0;
+    position: absolute; /* Stack all images on top of each other */
+    opacity: 0; /* Start hidden */
+    animation: fadeInOut 9s infinite; /* Apply fade-in-out animation */
+}
+
+/* Set staggered delays for each image to create the sequence */
+.contentSignup .leftsign img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.contentSignup .leftsign img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.contentSignup .leftsign img:nth-child(3) {
+    animation-delay: 6s;
+}
+.contentSignup .leftsign img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+/* Keyframes for fade-in-out effect */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; } /* Start and end fully transparent */
+    10%, 90% { opacity: 1; } /* Visible during these intervals */
+}
+
+
+
+
+
+.contentSignup .rightsign{
+    flex: 1;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--white);
+}
+
+.contentSignup .rightsign img{
+    width: 350px;
+    height: 120px;
+}
+
+.contentSignup .rightsign h1{
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.contentSignup .rightsign span{
+    font-family: "Inter";
+    font-size: 15px;
+    margin: 15px 10px 20px 10px;
+}
+
+.contentSignup .rightsign span a{
+    font-family: "Inter";
+    font-size: 15px;
+    color: var(--white);
+    margin: 15px 10px 20px 10px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}.contentSignup .rightsign span a:hover {
+    border-bottom-color: var(--white);
+}
+
+.contentSignup .rightsign p{
+    font-family: "Inter";
+    font-size: 15px;
+    margin: 15px 10px 20px 10px;
+}
+
+.contentSignup .rightsign .icon{
+    margin: 10px 10px 20px 10px;
+    font-family: "Inter";
+    font-size: 30px;
+}
+
+.contentSignup .rightsign .icon i{
+    margin: 5px;
+}
+
+.contentSignup .rightsign .label{
+    margin: 20px;
+    justify-content: center;
+}
+
+.contentSignup .rightsign .label .center{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.contentSignup .rightsign .label .center label{
+    font-size: 20px;
+    font-family: 'inter';
+    font-weight: bold;
+}
+
+.contentSignup .rightsign .label .center input{
+    border: 2px solid var(--button);
+    background-color: var(--button);
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.contentSignup .rightsign .label button{
+    margin: 10px;
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 30px;
+    border: 2px solid var(--button);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contentSignup .rightsign .label button:hover{
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .contentSignup {
+        flex-direction: column; 
+        margin: 20px;
+    }
+
+    .contentSignup .leftsign img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .contentSignup .rightsign h1 {
+        font-size: 30px; 
+    }
+
+    .contentSignup .rightsign p {
+        font-size: 14px;
+    }
+
+    .contentSignup .rightsign .icon {
+        font-size: 25px;
+    }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 768px) {
+    .contentSignup {
+        margin: 10px;
+    }
+
+    .contentSignup .leftsign img {
+        width: 100%;
+        height: auto; 
+    }
+
+    .contentSignup .rightsign h1 {
+        font-size: 24px; 
+    }
+
+    .contentSignup .rightsign p {
+        font-size: 12px;
+    }
+
+    .contentSignup .rightsign .icon {
+        font-size: 20px;
+    }
+
+    .contentSignup .rightsign .label {
+        margin: 10px;
+    }
+
+    .contentSignup .rightsign .label .center {
+        width: 90%; 
+    }
+
+    .contentSignup .rightsign .label .center input {
+        padding: 10px 20px;
+    }
+
+    .contentSignup .rightsign .label button {
+        padding: 10px 20px;
+        font-size: 14px; 
+    }
+}
+
+
+
+
+
+
+
+

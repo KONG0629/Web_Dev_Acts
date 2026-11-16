@@ -1,0 +1,541 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+* {
+    box-sizing: border-box; /* Ensure padding and borders do not cause overflow */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+/* profile styles */
+.profileContainer {
+    display: flex;
+    margin: 50px 50px 50px 200px;
+    width: 90%;
+    height: 175px;
+}
+
+.profilePicture img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.profileDetails {
+    height: 200px;
+    width: auto;
+    font-family: "Inter";
+    justify-content: flex-start;
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.profileDetails h1 {
+    font-size: 40px;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+.profileFunctions .navigationButton {
+    margin: 15px 10px 0px 30px ;
+    align-items: center;
+    padding: 5px 20px;
+    border: solid var(--black) 2px;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigationButton:hover {
+    background-color: var(--button);
+    color: var(--white);
+}
+
+.profileNavigation a {
+    font-size: 30px;
+    margin: 0px 0px 0px 20px;
+    color: var(--primary);
+}
+
+.profileNavigation a:hover{
+    color: var(--neutral);
+}
+
+.profileFunctions {
+    display: flex;
+    width: 1000px;
+    height: auto;
+}
+
+.profileFunctions .navigationButton {
+    height: 25px;
+    width: 130px;
+    margin-top: 18px;
+    font-size: 18px;
+    align-items: center;
+    padding: 0;
+}
+
+.profileFunctions .sortButton {
+    margin: 15px 10px 0px 30px ;
+    align-items: center;
+    padding: 3px 20px;
+    border: solid var(--black) 2px;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sortButton:hover {
+    background-color: var(--button);
+    color: var(--white);
+}
+
+.createPost {
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 2px solid var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.createPost:hover {
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.marginLine {
+    margin: 0 200px;
+    justify-content: left;
+}
+/* profile styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* post styles */
+.mediaContainer {
+    display: flex;
+    margin: 40px;
+    margin-left: 250px;
+}
+
+.posts {
+    font-family: "Inter";
+    height: auto;
+    width: 750px;
+    margin: 0 20px;
+}
+
+.singlePost {
+    padding: 15px;
+    border: 2px solid var(--button);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.singlePost img {
+    border-radius: 10px;
+    margin-top: 10px;
+    height: auto;
+    width: 675px;
+}
+
+.singlePost a {
+    text-decoration: none;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.postTitle {
+    text-align: left;
+}
+
+.viewsComments {
+    color: var(--button);
+}
+
+
+
+.about {
+    font-family: "Inter";
+    margin: 0 20px;
+}
+
+.singleAbout {
+    padding: 15px;
+    border: 2px solid var(--button);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.singleAbout h3 {
+    margin-bottom: 20px;
+}
+
+.singleAbout p {
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.aboutHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    margin-bottom: 20px;
+}
+
+.followCount {
+    height: 35px;
+    width: auto;
+    background-color: var(--button);
+    border-radius: 10px;
+    padding: 6px 15px;
+    margin-top: 4px;
+    color: var(--white);
+}
+
+.followButton {
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 2px solid var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.followButton:hover {
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.aboutDetails {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-bottom: 0;
+    color: var(--neutral);
+}
+
+.aboutDetails p {
+    font-size: 14px;
+}
+
+.aboutDetails b {
+    font-size: 18px;
+}
+
+
+@media (max-width: 1420px) {
+
+    .about {
+        display: none;
+    }
+
+}
+
+
+/* Profile container adjustments */
+@media (max-width: 1200px) {
+    .profileContainer {
+        width: 100%; /* Ensure container doesn't exceed the screen width */
+        margin: 20px;
+        padding: 15px; /* Reduce padding */
+        box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    }
+    .profilePicture img {
+        width: 140px;
+        height: 140px;
+    }
+    .profileDetails h1 {
+        font-size: 32px;
+    }
+    .profileDetails p {
+        font-size: 16px;
+    }
+    .profileFunctions {
+        display: flex;
+        justify-content: space-evenly; /* Space the buttons evenly */
+        width: 100%;
+        flex-wrap: wrap; /* Allow buttons to wrap into new rows if necessary */
+    }
+
+    .profileFunctions .navigationButton {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin: 5px;
+        width: auto; /* Allow the button size to be dynamic based on content */
+        min-width: 150px; /* Minimum width to keep buttons readable */
+        max-width: 250px; /* Prevent buttons from becoming too large */
+    }
+}
+
+@media (max-width: 992px) {
+    .profileContainer {
+        padding: 10px; /* Less padding */
+    }
+    .profilePicture img {
+        width: 120px;
+        height: 120px;
+    }
+    .profileDetails h1 {
+        font-size: 24px;
+    }
+    .profileDetails p {
+        font-size: 14px;
+    }
+    .profileFunctions {
+        justify-content: center; /* Center buttons when wrapping */
+    }
+
+    .profileFunctions .navigationButton {
+        padding: 10px 16px;
+        font-size: 12px;
+        margin: 8px;
+        width: 80%; /* Buttons will take up 80% of the container width */
+        max-width: 220px; /* Limit the width */
+    }
+}
+
+@media (max-width: 768px) {
+    .profileContainer {
+        padding: 5px; /* Minimal padding on very small screens */
+    }
+    .profilePicture img {
+        width: 100px;
+        height: 100px;
+    }
+    .profileDetails h1 {
+        font-size: 20px;
+    }
+    .profileDetails p {
+        font-size: 12px;
+    }
+    .profileFunctions {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        width: 100%;
+    }
+
+    .profileFunctions .navigationButton {
+        padding: 8px 14px;
+        font-size: 12px;
+        margin: 5px 0; /* Small margin between buttons */
+        width: 90%; /* Buttons take up 90% of the width */
+        max-width: 200px; /* Limit the max width */
+    }
+}
+
+@media (max-width: 576px) {
+    .profileContainer {
+        padding: 5px; /* Reduce padding */
+        margin: 10px; /* Margin adjusted to prevent overflow */
+    }
+    .profilePicture img {
+        width: 90px;
+        height: 90px;
+    }
+    .profileDetails h1 {
+        font-size: 18px;
+    }
+    .profileDetails p {
+        font-size: 10px;
+    }
+    .profileFunctions {
+        flex-direction: column; /* Ensure buttons stay stacked vertically */
+        align-items: center;
+    }
+
+    .profileFunctions .navigationButton {
+        padding: 6px 12px;
+        font-size: 10px;
+        margin: 5px 0; /* Small margin between buttons */
+        width: 80%; /* Buttons will take up 80% of the container width */
+        max-width: 180px; /* Prevent buttons from becoming too wide */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Post section adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .posts {
+        width: 90%;
+        margin: 0 auto; /* Center posts */
+    }
+    .singlePost {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    .singlePost img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .singlePost {
+        padding: 10px;
+    }
+    .singlePost img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .singlePost {
+        width: 100%;
+        padding: 8px;
+    }
+    .singlePost img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .singlePost {
+        padding: 6px;
+        margin: 8px 0;
+    }
+    .singlePost img {
+        width: 100%;
+    }
+}
+
+
+
+/* Global styles for smaller screens */
+@media (max-width: 768px) {
+    .navigationButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .createPost {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .searchBox {
+        width: 80vw;
+        margin-left: 0;
+        font-size: 14px;
+        padding: 8px;
+    }
+    .mediaContainer {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    * {
+        font-size: 12px;
+    }
+    .navigationButton {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+    .createPost {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .searchBox {
+        font-size: 12px;
+        padding: 6px;
+    }
+    .mediaContainer {
+        margin: 15px 0;
+    }
+}
+
+/* post styles */
+
+
+
+
+

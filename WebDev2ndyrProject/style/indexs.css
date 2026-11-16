@@ -1,0 +1,619 @@
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url("Inter-font/inter-black.woff2") format("woff2"),
+        url("Inter-font/inter-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("Inter-font/inter-bold.woff2") format("woff2"),
+        url("Inter-font/inter-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+*{
+    font-family: 'Inter';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    justify-content: center;
+    color: var(--black);
+}
+
+
+
+
+
+/*Style for content*/
+/*Style for content*/
+
+.content{
+    display: flex;
+    background-color: var(--primary);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*This style is for left side of the content */
+.content .left-side{
+    font-family: "Inter";
+}
+
+/*animation for span header*/
+.content .left-side .animate{
+    font-size: 34px;
+    font-weight: bold;
+    min-width: 280px;
+}
+
+.content .left-side .animate span{
+    position: relative;
+}
+
+.content .left-side .animate span::before{
+    content: "Where stories are born";
+    color: var(--white);
+    animation: words 20s infinite;
+}
+
+.content .left-side .animate span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: var(--primary);
+    border-left: 2px solid var(--danger);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+@keyframes words{
+    0%,20%{
+        content: "Where stories are born";
+    }
+    21%,40%{
+        content: "Stories That Spark";
+    }
+    41%,60%{
+        content: "Insights That Inspire";
+    }
+}
+@keyframes typing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+/*animation for span header*/
+
+/*.content .left-side h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(50, end) infinite, blink-caret 0.5s step-end infinite;
+}@keyframes typing {
+    0%, 50% { width: 0; }
+    25%, 75% { width: 100%; }
+}*/
+
+
+.content .left-side p{
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 30px;
+    max-width: 60%;
+    flex-wrap: wrap;
+}
+
+.content .left-side .content-button{
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content .left-side .content-button:hover{
+    border: 2px solid var(--button);
+    background-color: var(--white);
+    color: var(--black);
+}
+/*This style is for left side of the content */
+
+
+/*This style is for right side of the content */
+.content .right-side{
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.content .right-side img{
+    border-radius: 50px;
+    padding: 20px 20px;
+    height: 500px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-side img:hover{
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 10px 20px var(--black);
+}
+
+.right-side img:nth-child(1) {
+    margin-bottom: 90px;
+}
+
+.right-side img:nth-child(2) {
+    margin-bottom: 60px;
+}
+
+.right-side img:nth-child(3) {
+    margin-bottom: 30px;
+}
+/*This style is for right side of the content */
+
+
+/*responsive for first content guys*/
+@media (max-width: 1718px) {
+    .content{
+        padding: 30px;
+    }
+
+    .content .left-side{
+        max-width: 50%;
+    }
+    
+    .content .left-side h1{
+        margin: 20px 20px;
+    }
+
+    .content .left-side p{
+        margin: 20px;
+        max-width: 100%;
+    }
+
+    .content .left-side .content-button{
+        margin: 10px 20px;
+    }
+
+    .content .right-side{
+        margin-top: 40px;
+    }
+    
+    .content .right-side img{
+        padding: 20px 20px;
+        height: 450px;
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 1700px) {
+
+    .content .left-side{
+        max-width: 40%;
+    }
+
+    .content .right-side img{
+        padding: 20px 20px;
+        height: 440px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .content .left-side{
+        max-width: 30%;
+    }
+
+    .content .right-side img{
+        padding: 20px 20px;
+        height: 400px;
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 1085px) {
+    .content{
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .content .left-side{
+        max-width: 70%;
+    }
+
+    .content .left-side h1{
+        margin: 20px 20px;
+    }
+
+    .content .left-side p{
+        margin: 20px;
+        max-width: 100%;
+    }
+
+    .content .left-side .content-button{
+        margin: 10px 20px;
+    }
+
+    .content .right-side{
+        margin-top: 40px;
+    }
+    
+    .content .right-side img{
+        padding: 20px 20px;
+        height: 400px;
+        width: 200px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+    .content{
+        flex-direction: column;
+    }
+    
+    .content .left-side h1{
+        margin: 20px 20px;
+        font-size: 28px;
+    }
+
+    .content .left-side p{
+        margin: 20px;
+        font-size: 15px;
+    }
+
+    .content .left-side .content-button{
+        margin: 10px 20px;
+    }
+
+    .content .right-side{
+        margin-top: 40px;
+    }
+    
+    .content .right-side img{
+        padding: 20px 20px;
+        height: 300px;
+        width: 150px;
+    }
+}
+/*hanggang dito*/
+
+
+
+/*Style for content 2nd*/
+.contentContainer {
+    margin: 50px 15%;
+    text-align: center;
+    justify-content: center;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.contentImages {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 80px;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.imageContainer img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80, 80, 80, 0.8);
+    color: var(--white);
+    text-align: center;
+}
+
+.imageOverlay p {
+    padding: 28px;
+    font-size: 14px;
+}
+
+.imageContainer:hover{
+    transform: scale(1.05);
+}
+
+/*ito sa 2nd content na responsive*/
+
+@media (max-width: 1085px) {
+
+    .contentContainer {
+        margin: 50px 50px;
+        flex-wrap: wrap;
+    }
+
+    .contentImages {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 80px;
+    }
+    
+}
+
+@media (max-width: 900px) {
+
+    .contentContainer {
+        margin: 50px 50px;
+        flex-wrap: wrap;
+    }
+
+    .contentImages {
+        padding: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+    
+}
+
+@media (max-width: 850px) {
+    .contentContainer {
+        margin: 70px 70px;
+        flex-wrap: wrap;
+    }
+
+    .contentImages {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/*ito sa 2nd content na responsive*/
+
+
+
+
+
+/*3rd content*/
+.containerBackground {
+    display: flex;
+    background-color: var(--primary);
+    align-items: center;
+    padding: 100px;
+    justify-content: center;
+}
+
+.containerContent {
+    margin: 0px 15% 100px 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerContentRight {
+    margin: 0px 15% 100px 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerImageLeft img {
+    transform: rotate(-5deg);
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containerImageRight img {
+    transform: rotate(5deg);
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containerImageLeft img:hover,
+.containerImageRight img:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 10px 20px var(--black);
+}
+
+
+.containerText {
+    padding: 0 40px;
+    text-align: justify;
+}
+
+.containerText h1 {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--white);
+}
+
+.containerText p {
+    padding: 20px 0;
+    font-family: "Inter";
+    font-weight: lighter;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.containerText .content-button{
+    background-color: var(--button);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Inter";
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.containerText .content-button:hover{
+    border: 2px solid var(--button);;
+    background-color: var(--white);
+    color: var(--black);
+}
+/*3rd content*/
+
+
+
+/* Responsive layout for smaller screens 3rd content */
+@media (max-width: 850px) {
+    .containerContent {
+        flex-direction: column; 
+        margin: 0 5% 50px 5%; 
+        align-items: center;
+    }
+    .containerContentRight {
+        flex-direction: column-reverse; 
+        margin: 0 5% 50px 5%; 
+        align-items: center;
+    }
+
+    .containerImageLeft, .containerImageRight {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px; 
+    }
+
+    .right .containerText .containerImageRight{
+        flex-direction: column-reverse; 
+    }
+
+
+    .containerImageLeft img,
+    .containerImageRight img {
+        width: 90%; 
+        max-width: 300px;
+        transform: rotate(0deg);
+    }
+
+    .containerText {
+        padding: 0 20px; 
+        text-align: center; 
+        line-height: 1.5;
+    }
+
+    .containerText h1 {
+        font-size: 28px; 
+    }
+
+    .containerText p {
+        font-size: 14px;
+    }
+
+    .containerText .content-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Keyframes for Intro Animation */
+@keyframes introFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes introSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying the Intro Animation */
+body {
+    animation: introFadeIn 1s ease-in-out;
+}
+
+.header_nav {
+    animation: introSlideIn 1s ease-out;
+}
+
+
