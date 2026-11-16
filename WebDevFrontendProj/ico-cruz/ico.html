@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap' rel='stylesheet'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+    --bg-color: #113946;
+    --second-bg-color: #FEFAF6;
+    --text-color: #FEFAF6;
+    --main-color: #FEFAF6;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    cursor: pointer;
+}
+
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+}
+
+
+.home {
+    height: 100vh;
+    background: url("images/1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    justify-content: left;
+}
+
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+
+.span {
+    color: var(--main-color);
+}
+
+
+.home-content {
+    max-width: 600px;
+    justify-content: left;
+}
+
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+
+.social-media a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+
+
+}
+
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    color: #113946;
+
+
+}
+
+
+.btn:hover {
+    box-shadow: none;
+}
+
+
+.about {
+    display: flex;
+    gap: 2rem;
+    background-color:#FEFAF6;
+    color:#113946;
+    background: url("images/2.jpg") no-repeat;
+    background-size: cover;
+    justify-content: right;
+    align-items: center;
+    padding: 0 10%;
+}
+
+
+.about-content {
+    max-width: 650px;
+    justify-content: right;
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    color:#FEFAF6
+}
+
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: #FEFAF6
+}
+
+
+.services h2 {
+    margin-bottom: 2.5rem;
+}
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+
+.services-container .services-box {
+    flex: 1 1 25rem; /* Adjusted width */
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+}
+
+
+.services-container .services-box:hover {
+    border-color: #113946;
+    transform: scale(1.02);
+}
+
+
+.services-box i {
+    font-size: 5rem; /* Adjusted font size */
+    color: #113946;
+}
+
+
+.services-box h3 {
+    font-size: 2rem; /* Adjusted font size */
+    margin-top: 2rem; /* Adjusted margin */
+    color: #113946;
+}
+
+
+.services-box p {
+    font-size: 1.4rem; /* Adjusted font size */
+    margin: 1rem 0 2rem; /* Adjusted margin */
+    color: #113946;
+}
+
+
+.container {
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #113946;
+  color: #FEFAF6;
+  text-align: center;
+}
+
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  font-size: 18px;
+  justify-content: center;
+  color: #FEFAF6;
+}
+
+
+.skill {
+  width: calc(20% - 40px); /* Adjust the width according to your needs */
+  margin: 10px;
+  background-color: #FEFAF6;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 30px;
+  color:#113946;
+  text-align: center;
+}
+
+
+.skill-bar {
+  height: 28px;
+  background-color: #113946;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  color: #FEFAF6;
+}
+
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background-color: #113946;
+  animation: animate-bar 1s ease forwards;
+}
+
+
+.skills-container .skill {
+    flex: 1 1 25rem; /* Adjusted width */
+    background: var(--second-bg-color);
+    padding: 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    color: #113946;
+}
+
+
+@keyframes animate-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.skills-content.progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+
+.skills-content.progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+
+.skills-content.progress:nth-child(3) .bar span {
+    width: 75%;
+}
+
+
+.skills-content.progress:nth-child(4) .bar span {
+    width: 65%;
+}
+
+
+
+
+.portfolio {
+    background: #113946;
+}
+
+
+.portfolio h2 {
+    margin-bottom: 1.5rem;
+}
+
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem #FEFAF6;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.portfolio-box img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1.5rem; /* Adjusted padding */
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+
+.portfolio-box .portfolio-layer h4 {
+    font-size: 1.8rem; /* Adjusted font size */
+}
+
+
+.portfolio-box .portfolio-layer p {
+    font-size: 1.2rem; /* Adjusted font size */
+    margin: 0.4rem 0 0.8rem; /* Adjusted margin */
+}
+
+
+.portfolio-box .portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem; /* Adjusted width */
+    height: 3.5rem; /* Adjusted height */
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+
+.portfolio-box .portfolio-layer a i {
+    font-size: 1.4rem; /* Adjusted font size */
+    color: var(--second-bg-color);
+}
+
+
+
+
+.contact h2 {
+    margin-bottom: 3rem;
+
+
+}
+
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #113946;
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+
+.contact form textarea {
+    resize: none;
+}
+
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .skills {
+        padding-bottom: 7rem;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        align-items: right;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0.5rem 1rem 0 rgba(0, 0, 0, .2); /* Fixed syntax */
+        display: none;
+        align-items: right;
+    }
+
+
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .services h2 {
+        margin-bottom: 3rem;
+        --text-color: var(--bg-color);
+    }
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 90vw;
+    }
+    .about-img img {
+        width: 90vw;
+}
+}
+.multiple-text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #FEFAF6;
+}
+
+
+</style>
+<body>
+    <body>
+        <header class="header" id="header">
+            <a href="../Home.html" class="logo">Geesha</a>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </header>
+   
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, It's Me</h3>
+                <h1>Geesha Ico Cruz</h1>
+                <h3>And I'm an aspiring Web Developer</h3>
+                <p>Hello there! Welcome to my corner of the web! <br> Take a stroll through my portfolio and get a glimpse of my creative endeavors. Enjoy the journey!</p>
+                <br>
+                <br>
+                <div class="social-media">
+                <a href="https://www.facebook.com/geesha.icocruz"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/geesha.ccrz"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://mail.google.com/mail/u/2/#inbox"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://twitter.com/httpsgeesha"><i class='bx bxl-twitter'></i></a>
+                <a href="https://discord.com/channels/@me"><i class='bx bxl-discord-alt' ></i></a>
+                </div>
+                <br>
+                <br>
+                <a href="#" class="btn">Hire Me</a>
+            </div>
+        </section>
+   
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+            <p>Hello there! I'm Geesha Ico Cruz, a passionate and versatile Web Developer and Graphic Designer with a knack for crafting immersive digital experiences. With a keen eye for design, I specialize in creating user-friendly interfaces and visually captivating designs that leave a lasting impression.</p>
+            <h2>Who Am I?</h2>
+            <p>I am driven by a curiosity for technology and a desire to create meaningful experiences. With a background in Bachelor of Science in Information Technology, I've honed my skills in Web Developing and continuously seek to expand my knowledge in this ever-evolving field.</p>
+            <h2>What I Do</h2>
+            <p>Whether it's crafting compelling designs, developing robust applications, or strategizing impactful solutions, I thrive on the challenges that come with each project. I am committed to delivering high-quality work that leaves a lasting impression and drives tangible results for your business or project.</p>
+            </div>
+        </section>
+   
+        <section class="services" id="services">
+            <h2 class="heading">Our <span>Services</span></h2>
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Development</h3>
+                    <p>Create user-friendly interfaces with cutting-edge technologies and develop scalable web applications for businesses of all sizes.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class='bx bxs-paint'></i>
+                    <h3>Graphic Design</h3>
+                    <p>Design captivating visuals that convey your brand's message effectively and create eye-catching logos, posters, and marketing materials.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class='bx bx-bar-chart-alt'></i>
+                    <h3>UI/UX Designer</h3>
+                    <p>Create wireframes and prototypes to visualize on design concepts and conduct usability testing to optimize the usability of digital products.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+   
+        <section class="skills" id="skills">
+            <h2>Coding Skills</h2>
+            <div class="skills-container">
+              <div class="skill">
+                <i class='bx bxs-file-html'></i>
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar"><span>90%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bxs-file-css' ></i>
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar"><span>80%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bxl-javascript' ></i>
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar"><span>75%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bxl-python' ></i>
+                <div class="skill-name">Python</div>
+                <div class="skill-bar"><span>65%</span></div>
+              </div>
+              </div>
+            <h2>Professional Skills</h2>
+            <div class="skills-container">
+              <div class="skill">
+                <i class='bx bxs-paint'></i>
+                <div class="skill-name">Web Design</div>
+                <div class="skill-bar"><span>90%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bx-code-alt'></i>
+                <div class="skill-name">Web Development</div>
+                <div class="skill-bar"><span>70%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bx-desktop'></i>
+                <div class="skill-name">Graphic Design</div>
+                <div class="skill-bar"><span>85%</span></div>
+              </div>
+              <div class="skill">
+                <i class='bx bx-bar-chart-alt'></i>
+                <div class="skill-name">UI/UX Design</div>
+                <div class="skill-bar"><span>75%</span></div>
+              </div>
+              </div>
+          </div>
+   
+        <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 1</h4>
+                    <h2>Website</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 2</h4>
+                    <h2>Animation</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 3</h4>
+                    <h2>Illustration</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio4.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 4</h4>
+                    <h2>Application</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio5.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 5</h4>
+                    <h2>Graphics</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio6.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Portfolio 6</h4>
+                    <h2>Web Design</h2>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+   
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 All rights reserved | Designed by Geesha</p>
+            </div>
+        </footer>
+   
+        <!-- Custom JavaScript -->
+        <script src="script.js"></script>
+
+
+</body>
+</html>
