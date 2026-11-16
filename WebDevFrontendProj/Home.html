@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style-style/home.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+<style>
+    @font-face{
+    font-family: quicksand;
+    src: url("style-style/Fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+    src: url("style-style/Fonts/Lustria/Lustria-Regular.ttf");
+    src: url("style-style/Fonts/Rosario/Rosario-VariableFont_wght.ttf");
+ }
+    .box{
+       display: flex;
+        position: absolute;
+        top: 65px;
+        right: 120px;
+    }
+    .image-logo img{
+        /**/
+        margin-left: 50px; 
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+    }
+    .box > i{
+        font-size: 20px;
+        color: #B8A9A8;
+    }
+    
+    .profile i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 250px;
+    }
+    .profile i:hover{
+        color: #B8A9A8;
+    }
+    .store i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .store i:hover{
+        color: #B8A9A8;
+    }
+
+    /*bgbgbgbg-bgbgbgbg*/
+
+.top-top{
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    color: #4E4E4D;
+}
+
+.top-top span{
+    font-family: lustria;
+}
+
+.wrap-all-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 50px;
+}
+.box-card-box{
+    background: transparent;
+    border-radius: 10px;
+}
+
+.box-card-box img{
+    border-radius: 50px;
+    width:100%;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+.box-card-box img:hover{
+    transform: scale(1.1);
+}
+
+.text-head-text{
+    text-align: center;
+    color:#4E4E4D;
+}
+
+.text-head-text h1{
+    font-family: quicksand;
+    font-size: 30px;
+}
+
+.text-head-text button{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: #EDD8CF;
+    border-color: #4E4E4D;
+    cursor: pointer;
+    color: #4E4E4D;
+    font-family: quicksand;
+}
+.text-head-text button:hover{
+    background-color: #FBEFEA;
+}
+
+/*bottom pic 3*/
+
+.top-top-bottom {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Lustria;
+}
+
+.wrap-all-card-bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 1500px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.box-card-box-bottom {
+    background: transparent;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content stays inside the border radius */
+}
+
+.box-card-box-bottom img {
+    border-radius: 50px;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box-card-box-bottom img:hover {
+    transform: scale(1.1);
+}
+
+.top-top-bottom span {
+    color: #4E4E4D;
+    font-family: Lustria;
+}
+
+.text-head-text-bottom {
+    text-align: center;
+    color: #4E4E4D;
+    font-family: Quicksand;
+}
+
+.text-head-text-bottom p {
+    font-size: 20px;
+    font-family: Quicksand;
+}
+
+.background-for-mid {
+    border: 10px solid #EDD8CF;
+    margin: 100px auto;
+    background-color: #EDD8CF;
+    border-radius: 50px;
+    padding: 20px;
+    max-width: 90%;
+}
+
+@media (max-width: 1200px) {
+    .top-top-bottom {
+        font-size: 2.5em;
+    }
+
+    .background-for-mid {
+        margin: 80px auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .top-top-bottom {
+        font-size: 2em;
+    }
+
+    .background-for-mid {
+        margin: 60px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-top-bottom {
+        font-size: 1.5em;
+    }
+
+    .background-for-mid {
+        margin: 40px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-top-bottom {
+        font-size: 1.2em;
+    }
+
+    .background-for-mid {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .wrap-all-card-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .box-card-box-bottom img {
+        max-height: 200px;
+    }
+}
+
+
+
+
+/*Search bar*/
+.search-box{
+    border: 2px solid #4E4E4D;
+    margin-top: -90px;
+    position: absolute;
+    width: 600px;
+    background: #EDD8CF;
+    border-radius: 50px;
+}
+.row{
+    display:flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+input{
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    font-size: 18px;
+    color: #B8A9A8;
+}
+.buton{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+}
+.buton .fa-solid{
+    width: 25px;
+    color: #FFF7EA;
+    font-size: 30px;
+    cursor: pointer;
+}
+::placeholder{
+    color: #FFF7EA;
+}
+.result-box ul{
+    border-top: 2px solid #4E4E4D;
+    padding: 15px 10px;
+}
+.result-box li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.result-box ul li:hover{
+    background: #FBEFEA;
+}
+.result-box{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 992px) {
+    .search-box {
+        width: 80%;
+        margin: 10px auto;
+        position: static;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search-box {
+        width: 95%;
+    }
+}
+
+
+
+
+
+    /*Contact*/
+.contact-container{
+    margin-top: -100px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    color: #4E4E4D;
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: lustria;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 210px;
+    height: 5px;
+    background-color: #4E4E4D;
+    border-radius: 10px;
+    margin-bottom: 20px ;
+}
+
+.contact-inputs{
+    background-color: #EDD8CF;
+    width: 600px;
+    height: 50px;
+    border: 4px solid #4E4E4D;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #4E4E4D;
+    border-radius: 10px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 4px solid #B8A9A8;
+}
+
+.contact-inputs::placeholder{
+    color: #4E4E4D;
+    font-family: quicksand;
+    font-size: 20px;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #FFF7EA;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #B8A9A8;
+    cursor: pointer;
+}
+.contact-right img{
+    width: 600px;
+    border-radius: 300px;
+}
+
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+}
+
+
+
+.color-background {
+    border: 70px solid #EDD8CF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -9999; /* Ensure it's above other content */
+    background-color: rgba(237, 216, 207, 0.9); /* Add some transparency */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+@media (max-width: 768px) {
+  .color-background {
+    margin-top: -185%;
+  }
+}
+@media (max-width: 768px) {
+  .color-background {
+    margin-top: 0; /* Reset margin for smaller screens */
+  }
+}
+@media (min-width: 768px) {
+  .color-background {
+    position: absolute; /* Change position to absolute for medium and large screens */
+  }
+}
+@media (max-width: 580px) {
+  .color-background {
+    position: absolute; /* Position the background color at the top of the page */
+  }
+}
+@media (max-width: 680px) {
+  .color-background {
+    position: absolute; /* Position the background color at the top of the page */
+  }
+}
+
+
+
+
+
+
+
+/*reviews*/
+.container{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    max-width: 1300px;
+    width: 150%;
+    background-color: #EDD8CF;
+    text-align: center;
+    border-radius: 8px;
+    padding: 4em 0;
+}
+
+.text-light{
+    color: #4E4E4D;
+    font-family: lustria;
+}
+
+.swiper {
+    width: 600px;
+    height: auto;
+  }
+
+.swiper .swiper-slide .flex{
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper .swiper-slide .comments{
+    background-color: #FBEFEA;
+    padding: 1.5em 2em;
+    width: 50%;
+    border-radius: 5px;
+    font-size: .9em;
+    position: relative;
+    color: #4E4E4D;
+    font-family: rosario;
+}
+
+.swiper .swiper-slide .comments::after{
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #FFF7EA;
+    z-index: -99;
+}
+
+
+.swiper .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.swiper .profile img{
+    width: 30%;
+    border-radius: 50%;
+    border: 5px solid #FFF7EA;
+    margin: 10px 0;
+}
+
+.swiper .profile > h3{
+    text-decoration: none;
+    color: #4E4E4D;
+    font-family: rosario;
+}
+
+.swiper .profile > span{
+    color: #4E4E4D;
+    font-family: rosario;
+    font-size: .8em;
+}
+
+.swiper .swiper-button-prev, .swiper-button-next{
+    color: #FFF7EA;
+    display: none;
+} 
+
+@media (min-width: 320px) {
+    .board{
+        width: auto;
+    }
+
+    .swiper {
+        width: 320px;
+      }
+
+      .board > h1, p{
+          padding: 0 2em;
+      }
+}
+
+@media (min-width: 768px) {
+    .board{
+        width: 100%;
+    }
+
+    .swiper {
+        width: 600px;
+      }
+
+    .swiper .swiper-button-prev, .swiper-button-next{
+        display: initial;
+    }
+
+}
+</style>
+<body>
+
+
+
+</div>
+
+    <main class="main-wrap">
+        <section class="showcase">
+            <div class="overlay">
+                <div class="head">
+                    <button class="toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="image-logo">
+                    <a href="Home.html"><img src="image/logo.jpg"></a>
+                </div>
+                <div class="box">
+
+                    <div class="profile">
+                        <a href="account.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+
+                    <div class="store">
+                       <a href="addtocart.html"><i class="fa-solid fa-store"></i></a> 
+                    </div>
+
+                </div>
+
+                <div class="content">
+                    <div class="welcome">
+                        <div class="content-text">
+                            
+                            <div class="search-box">
+                                <div class="row">
+                                    <input type="text" id="input-box" placeholder="Search" autocomplete="off">
+                                    <a href="addtocart.html"><button class="buton"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                                </div>
+                                <div class="result-box">
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <a href="addtocart.html"><img src="image/wall.jpeg"></a>
+                            <h3 id="welcome">Welcome to Byte Beauty</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class ="top-top"><span>Shop by category</span></div>
+                <div class="wrap-all-card">
+            
+                    <div class="box-card-box">
+                        <a href="facepages.html"><img src ="image/face1_top.jpg"></a>
+                        <div class="text-head-text">
+                        <h1>Face</h1>
+                            <p></p>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box">
+                        <a href="eyespages.html"><img src ="image/eyes1_top.jpg"></a>
+                        <div class="text-head-text">
+                        <h1>Eyes</h1>
+                            <p></p>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box"> 
+                        <a href="lipspages.html"><img src ="image/lips1_top.jpg"></a>
+                        <div class="text-head-text">
+                        <h1>Lips</h1>
+                            <p></p>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box">
+                        <a href="skincarepages.html"><img src ="image/skincare1_top.jpg"></a>
+                        <div class="text-head-text">
+                        <h1>Skincare</h1>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+<!---->
+<br>
+    <div class="background-for-mid">     
+
+    <div class ="top-top-bottom"><span>Shop Bestseller</span></div>
+    <div class="wrap-all-card-bottom">
+
+        <div class="box-card-box-bottom">
+            <a href="addtocart.html"><img src ="image/skincare2_bottom.jpg"></a>
+            <div class="text-head-text-bottom">
+            <h1>Byte Beauty PureEssence<br>Skin Refiner</h1>
+                <p>P1250.00</p>
+            </div>
+        </div>
+         
+        <div class="box-card-box-bottom">
+            <a href="addtocart.html"><img src ="image/lips2_bottom.jpg"></a>
+            <div class="text-head-text-bottom">
+            <h1>Byte Beauty matte<br>lipstick</h1>
+                <p>P199.00</p>
+            </div>
+        </div>
+         
+        <div class="box-card-box-bottom">
+            <a href="addtocart.html"><img src ="image/eyes2_bottom.jpg"></a>
+            <div class="text-head-text-bottom">
+            <h1>Byte beauty<br>eyesshadow</h1>
+                <p>P149.00</p>
+            </div>
+        </div>
+        
+    </div>
+</div>  
+
+
+    <div class ="top-top"><span>Shop our latest collection</span></div>
+                <div class="wrap-all-card">
+            
+                    <div class="box-card-box">
+                        <a href="addtocart.html"><img src ="image/face3.jpeg"></a>
+                        <div class="text-head-text">
+                        <h1>Byte Beauty Loose<br>Powder Oil Control</h1>
+                            <a href="addtocart.html"><button>Shop Now</button></a>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box">
+                        <a href="addtocart.html"><img src ="image/face1.jpeg"></a>
+                        <div class="text-head-text">
+                        <h1>Byte Beauty Multi Use<br>Cream Tint</h1>
+                            <a href="addtocart.html"><button>Shop Now</button></a>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box"> 
+                        <a href="addtocart.html"><img src ="image/lips2.jpeg"></a>
+                        <div class="text-head-text">
+                        <h1>Byte Beauty Highlighter<br>Contour Stick</h1>
+                            <a href="addtocart.html"><button>Show Now</button></a>
+                        </div>
+                    </div>
+                     
+                    <div class="box-card-box">
+                        <a href="addtocart.html"><img src ="image/lips5.jpeg"></a>
+                        <div class="text-head-text">
+                        <h1>Byte Beauty Serum<br>Tinted Lip Balm</h1>
+                            <a href="addtocart.html"><button>Shop Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+
+
+    <!--about us-->
+        
+    <div class="head-about-us">
+        <h2 id="about-byte">About Us</h2>
+        <div class="card-about-us-about-us">
+
+            <div class="img-left">
+                <img src="image/eyes1_top.jpg">
+            </div>
+
+            <div class="img-top">
+                <img src="image/eyes2_bottom.jpg">
+            </div>
+
+            <div class="img-bottom">
+                <img src="image/face1_top.jpg">
+            </div>
+
+            <div class="img-right">
+                <img src="image/face6.jpeg">
+            </div>
+
+            <div class="text-about-us">
+                <h3>OUR SHOP</h3>
+                <p>
+                    Byte Beauty offers a diverse range of high-quality makeup 
+                    and skincare products, catering to every beauty need and 
+                    preference. From luxurious skincare essentials to vibrant 
+                    makeup palettes, we curate an extensive collection to 
+                    inspire self-expression and enhance natural beauty. With 
+                    a focus on innovation, quality, and inclusivity, we strive 
+                    to empower individuals to explore and embrace their unique 
+                    style while promoting healthy, radiant skin.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!--about us-->
+
+
+
+    <!--meet our team-->
+
+<div class="meet-our-team">
+    <h1>Meet The Team</h1>
+    <div class="wrap-all-card">
+
+        <div class="box-card-box">
+             
+            <img src ="image/yrrejto.jpg">
+
+            <div class="social-side-social">
+            <a href="kongJ/portfolio.html"><i class="fa-solid fa-user"></i></i></a>
+                
+            </div>
+            
+            <div class="text-head-text">
+            <h1>Kong Jerry G.</h1>
+                <p>Team Leader/Web-Developer</p>
+            </div>
+        </div>
+         
+        <div class="box-card-box">
+             
+            <img src ="image/lucas.jpg">
+
+            <div class="social-side-social">
+            <a href="genona/index.html"><i class="fa-solid fa-user"></i></i></a>
+                
+            </div>
+
+            <div class="text-head-text">
+            <h1>Genona Edrian</h1>
+                <p>Web-Developer</p>
+            </div>
+        </div>
+         
+        <div class="box-card-box">
+             
+            <img src ="image/icoo.jpg">
+
+            <div class="social-side-social">
+            <a href="ico-cruz/ico.html"><i class="fa-solid fa-user"></i></a>
+                
+            </div>
+
+            <div class="text-head-text">
+            <h1>Ico-Cruz Geesha</h1>
+                <p>Graphic Designer/Info Architect</p>
+            </div>
+        </div>
+         
+        <div class="box-card-box">
+             
+            <img src ="image/alexin.jpg">
+
+            <div class="social-side-social">
+            <a href="alexin/para.html"><i class="fa-solid fa-user"></i></a>
+                
+            </div>
+
+            <div class="text-head-text">
+            <h1>Parapina Alexin</h1>
+                <p>Graphic Designer/Content Manager</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--meet our team-->
+
+    
+<!--reviews-->
+
+<div class="container">
+    <div class="board">
+        <h2 class="text-light">Word form our customers</h2>
+        <p class="text-light">Some of the fullfilled costomers reviews</p>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        Byte aligners are praised for their simple process, short treatment time, and effective results. Customers appreciate the affordability and customer service, despite some noting issues with insurance and customer support                    </div>
+                    <div class="profile">
+                        <img src="image/r1.png" alt="">
+                        <h3>Elyne Delima</h3>
+                        <span>Nursing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        Byte has a TrustScore of 4.8/5 based on over 2,240 reviews. Many users highlight the effectiveness of the aligners and the ease of use, though some report issues with customer service and alignment results                     </div>
+                    <div class="profile">
+                        <img src="image/r2.png" alt="">
+                        <h3>Danielle P. Dionisio</h3>
+                        <span>Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        Byte scores 4.8/5 stars based on 2,788 reviews. Customers enjoy the all-night option and the free inclusion of HyperByte, although the cost and occasional customer service issues are mentioned                    </div>
+                    <div class="profile">
+                        <img src="image/r3.png" alt="">
+                        <h3>Ashley Dela Cruz</h3>
+                        <span>Physical Therapy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        A user shared their positive experience, stating, "I'm about halfway through with Byte and I am so happy I chose them. You can see my teeth getting straighter every time I put a new liner in"​                    </div>
+                    <div class="profile">
+                        <img src="image/r4.png" alt="">
+                        <h3>Lorie C. Borbe</h3>
+                        <span>Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        shared her happiness with Byte, mentioning that the process of wearing aligners for 22 hours a day along with using the HyperByte tool was simple and effective. She praised the customer service for being helpful when she needed to extend her plan and order retainers​                     </div>
+                    <div class="profile">
+                        <img src="image/r7.png" alt="">
+                        <h3>Noelle Belga</h3>
+                        <span>Multimedia Arts</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        chose Byte’s nighttime aligners to correct his gapped teeth discreetly without wearing aligners during work hours. He started seeing significant results within four weeks, reducing the gap between his incisors and boosting his confidence                    </div>
+                    <div class="profile">
+                        <img src="image/r5.png" alt="">
+                        <h3>Ruvie Jean B. Mabuti</h3>
+                        <span>Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        was impressed by Byte's promise of a straighter smile in just 11 weeks. She found the treatment process straightforward and effective, without any difficulties during her experience                    </div>
+                    <div class="profile">
+                        <img src="image/r6.png" alt="">
+                        <h3>Carmela Ocray</h3>
+                        <span>Pharmacy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        Byte’s payment flexibility is another strong point. Customers appreciated the options of paying upfront, using financing plans through bytepay™ or Affirm, and even utilizing dental insurance or HSA/FSA debit cards for treatment costs​                    </div>
+                    <div class="profile">
+                        <img src="image/r8.png" alt="">
+                        <h3>Darryl Tan</h3>
+                        <span>Psychology</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        Many users praised Byte's customer service and the convenience of remote treatment, highlighting the absence of in-office visits as a significant advantage. Byte's customer service is noted for its quick response times, even through social media channels like Instagram                    </div>
+                    <div class="profile">
+                        <img src="image/r9.png" alt="">
+                        <h3>Bianca Panimdim</h3>
+                        <span>Digital Illustration</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="flex">
+                    <div class="comments">
+                        The Byte-at-Night option is particularly favored by users who prefer not to wear aligners during the day. This option, though slightly more expensive and with a longer treatment duration, provides a comfortable alternative for night-time wearers​                     </div>
+                    <div class="profile">
+                        <img src="image/r11.png" alt="">
+                        <h3>Kendrick Arenas</h3>
+                        <span>Hospitality Management</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    
+        </div>
+
+    </div>
+</div>
+
+<!--reviews-->
+
+
+
+
+<!--Contact-->
+
+<div class="contact-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+            <h2 id="contact-byte">Contact Us</h2>
+            <hr>
+        </div>
+        <input type="hidden" name="access_key" value="6cf6e99e-98a4-4dcf-a145-9bad7d5f5943">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">Submit <img src="" alt=""></button>
+    </form>
+    <div class="contact-right">
+        <a href="Home.html"><img src="image/logo.jpg"></a>
+    </div>
+</div>
+
+<!--Contact-->
+
+
+
+
+    <!--footer-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a href="Home.html"><img src="image/logo.jpg"></a>
+            <h3>Byte<span> Beauty</span></h3>
+            <p class="footer-links">
+            <a href="Home.html">Home</a>
+            |
+            <a href="#about-byte">About</a>
+            <br>
+            <a href="#contact-byte">contact</a>
+            |
+            <a href="faqs.html">FAQS</a>
+            <br>
+            <a href="privacypolicy.html">Privacy_Policy</a>
+            |
+            <a href="termsandconditions.html">terms&conditions</a>
+            </p>
+            <p class="footer-company-name">make ups <strong>Byte Beauty Developer</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <a href="https://www.bing.com/search?q=commonwealth+quezon+city+map&qs=NM&pq=quezon+city+commonwealth+maps&sc=10-29&cvid=74DA79CE641F4807876AB85304342565&FORM=QBRE&sp=1&lq=0"><i class="fa fa-map-marker"></i></a>
+                <p>Quezon-City</p>
+            </div>
+            <div>
+                <a href="#contact-byte"><i class="fa fa-phone"></i></a>
+                <p>+69-945-723-6268</p>
+            </div>
+            <div>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+                <p>kong@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h1>FOLLOW US</h1>
+            <br><br><br>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/byte.beauty"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/byte__beauty/?fbclid=IwZXh0bgNhZW0CMTAAAR143ihNoNyomjBb5rTD_kVxgvKHBKdsXHep4GqLAFOcJ_A7UZzOYQUWrXk_aem_AVgDzDT1K7_P2Up6jmKP37L4KggHRB-IkuS5BQ4ztPTxHkMMrkNR_vh_L-FTVkSCKX7mm7FqIO1BAjMCkNCvS6yq"> <i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://x.com/bytebeauty001?t=hKIB-vyOgzNxWMAKR7NtBA&s=09&fbclid=IwZXh0bgNhZW0CMTAAAR3WPeQbwbJZp5NNqOOw65qCTGmQLwKl7y8h44EvzJTH-hahkYZfG8yUxBU_aem_AVjR6XUjxbKYBhaPL5WEmtBtuBOr_2GuXvIwgEqiJFSsHKRug-3sm7v2zalY3TJAP4534714Vf3OocGoHqTotDjF"> <i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+            <p class="footer-company-about">
+                <br><br><br><br>
+                <strong>Copyright © Byte Beauty 2024</strong>
+            </p>
+        </div>
+    </footer>
+    <!--footer-->
+    
+    
+            </div>
+        </section>
+
+
+
+        <header class="main-head">
+            <div class="main-nav">
+                <nav class="navbar">
+                    <div class="navbar-nav">
+                        <div class="title">
+                        <a href="#">
+                            <h3>
+                                <button class="toggler1">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                                <span class="title-text">Byte Beauty</span>
+                            </h3>
+                        </a>
+                        </div>
+                    <ul class="nav-list">
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="link-text">Home</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="addtocart.html" class="nav-link">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="link-text">Product</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="account.html" class="nav-link">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="link-text">Account</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span class="link-text">Login</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="privacypolicy.html" class="nav-link">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span class="link-text">Privacy_Policy</span>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-list-item">
+                                <a href="termsandconditions.html" class="nav-link">
+                                    <i class="fa-solid fa-asterisk"></i>
+                                    <span class="link-text">Terms&Conditions</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="faqs.html" class="nav-link">
+                                    <i class="fa-solid fa-question"></i>
+                                    <span class="link-text">FAQS</span>
+                                </a>
+                            </li>
+
+
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </main>
+
+
+
+    <div class="color-background">
+
+
+    
+    
+
+
+    <script src="java-java/home_java.js"></script>
+
+    <script>
+        let availableKeywords = [
+            'latest collection',
+            'lipstick',
+            'skincare',
+            'eyes',
+            'face',
+            'bestseller',
+        ];
+
+        const resultsBox = document.querySelector(".result-box");
+        const inputBox = document.querySelector("#input-box");
+
+        inputBox.addEventListener("input", function(){
+            let result = [];
+            let input = inputBox.value;
+            if (input.length){
+                result = availableKeywords.filter((keyword)=>{
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            display(result);
+    
+            if(!result.length){
+                resultsBox.innerHTML = '';
+            }
+        });
+
+        function display(result){
+            const content = result.map((list)=>{
+                return "<li onclick=selectInput(this)>" + list + "</li>";
+            });
+            
+            resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>"; 
+        }
+    
+        function selectInput(list){
+            inputBox.value = list.innerHTML;
+            resultsBox.innerHTML = '';
+        }
+    </script>
+
+
+<!--reviews.js-->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script >
+
+// initialize swiper js
+
+const swiper = new Swiper('.swiper', {
+loop: true,
+
+ // If we need pagination
+pagination: {
+el: '.swiper-pagination',
+},
+
+// Navigation arrows
+navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+},
+
+
+})
+
+</script>
+
+
+</body>
+</html>

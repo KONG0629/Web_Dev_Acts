@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>FAQS</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quicksand;
+}
+
+@font-face{
+    font-family: quicksand;
+    src: url("style-style/Fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+ }
+
+#faqs{
+    font-family: quicksand;
+}
+
+        .shipping {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .shipping img {
+            max-width: 60%;
+            height: auto;
+        }
+
+.paragraph1 p{
+        color: #4E4E4D;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-align: left;
+        text-align: justify;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-family: rosario;
+    }
+    .paragraph2 p{
+        color: #4E4E4D;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-align: left;
+        text-align: justify;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-family: rosario;
+    }
+
+body{
+    background-color: #FBEFEA;
+}
+a{
+    text-decoration: none;
+}
+.main-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.main-head{
+    width: 60px;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s ease-in-out;
+    visibility: hidden;
+}
+.main-wrap .main-head.active{
+    width: 15%;
+    visibility: visible;
+}
+.main-head .main-nav{
+    width: 100%;
+}
+.main-head .main-nav .navbar{
+    width: 100%;
+}
+.main-head .main-nav .navbar .navbar-nav .title{
+    padding: 15px 19px;
+    transition: .1s ease-in-out;
+}
+
+.main-head .main-nav .navbar .navbar-nav .title .toggler1{
+    color: #EDE6DC;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+.main-head .main-nav .navbar .navbar-nav .title .toggler1:hover{
+    background-color: #4E4E4D;
+}
+
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title{
+    padding: 15px 12px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3{
+    color: #FFF7EA;
+    font-family: quicksand;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+    position: relative;
+     /**/background-color: #B8A9A8;
+     border-radius: 10px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3 .title-text{
+    position: absolute;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+     /**/
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title .title-text{
+    opacity: 1;
+    
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list{
+    margin: 0;
+    padding: 10px 10px;
+    /**/
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item{
+    list-style: none;
+    padding: 15px 10px;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #B8A9A8;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:last-child{
+    margin-bottom: 0;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:hover{
+    background: #4e4e4d;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link{
+    color: #FFF7EA;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    position: absolute;
+    top: 3px;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    opacity: 1;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link i{
+    margin-right: 5px;
+    font-size: 20px;
+}
+.showcase{
+    width: 97%;
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.showcase.width{
+    width: 80%;
+}
+.showcase .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.showcase .head{
+    padding: 13px 25px;
+}
+.showcase .head .toggler{
+    display: inline-block;
+    background: transparent;
+    border: none;
+    outline: 0;
+    color: #4E4E4D;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: .2s ease;
+    position: absolute;
+    top: 55px;
+    right: 45px;
+}
+.showcase .head .toggler:hover{
+    background: #b8a9a8;
+}
+.showcase .head .toggler i{
+    font-size: 30px;
+}
+.showcase .content{
+    text-align: center;
+   margin-bottom: 50px;
+}
+.showcase .content img{ 
+    border-radius: 50px;
+    margin-left: -300px;
+    margin-top: -10px;
+    height: 500px;
+    width: 1200px;
+}
+.showcase .content h3{
+    font-size: 45px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 55px;
+    text-transform: capitalize;
+    color: #4E4E4D;
+}
+.showcase .content .welcome{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase .content .welcome .content-text{
+    width: 640px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-text {
+        text-align: center;
+    }
+
+    .content-text img {
+        max-width: 200%;
+        height: auto;
+        margin: 70px -200px ;
+        transition: max-width 0.5s ease, height 0.5s ease;
+    }
+
+    .content-text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        transition: font-size 0.5s ease;
+    }
+}
+
+
+
+
+
+
+
+
+    .paragraph p{
+        color: #4E4E4D;
+        margin-left: 100px;
+        margin-right: 100px;
+        text-align: left;
+        text-align: justify;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-family: rosario;
+    }
+
+
+
+
+
+
+
+
+
+    .box{
+       display: flex;
+        position: absolute;
+        top: 65px;
+        right: 120px;
+    }
+    .image-logo img{
+        /**/
+        margin-left: 50px; 
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+    }
+    .box > i{
+        font-size: 20px;
+        color: #B8A9A8;
+    }
+    
+    .profile i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 250px;
+    }
+    .profile i:hover{
+        color: #B8A9A8;
+    }
+    .store i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .store i:hover{
+        color: #B8A9A8;
+    }
+
+
+
+
+
+
+
+
+
+    /*Footer style*/
+
+    footer {
+   margin-top: 50px; 
+}
+
+@media (max-height:800px) {
+   footer {
+       position: static;
+   }
+   header {
+       padding-top: 40px;
+   }
+}
+
+.footer-distributed { 
+   background-color: #ede6dc;
+   box-sizing: border-box;
+   width: 103%;
+   text-align: left;
+   font: bold 16px sans-serif;
+   padding: 50px 50px 60px 50px;
+   position: absolute;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+   display: inline-block;
+   vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left img{
+   width: 100px;
+   height: 100px;
+   border-radius: 50px;
+}
+
+.footer-distributed .footer-left {
+   width: 30%;
+}
+
+.footer-distributed h3 {
+   color: #4e4e4d;
+   font-family: normal 36px 'quicksand', cursive;
+   margin: 0;
+}
+
+
+.footer-distributed h3 span {
+   color: #4e4e4d;
+}
+
+/* Footer li5ks */
+
+.footer-distributed .footer-links {
+   color: #4e4e4d;
+   margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+   display: inline-block;
+   line-height: 1.8;
+   text-decoration: none;
+   color: inherit;
+}
+
+.footer-distributed .footer-links a:hover{
+   color: #b8a9a8;
+}
+
+.footer-distributed .footer-company-name {
+   color: #4e4e4d;
+   font-size: 20px;
+   font-weight: normal;
+   margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+   width: 35%;
+}
+
+.footer-distributed .footer-center i {
+   background-color: #33383b;
+   color: #EDE6DC;
+   font-size: 25px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 42px;
+   margin: 10px 15px;
+   vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+   font-size: 25px;
+   line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+   display: inline-block;
+   color: #4e4e4d;
+   vertical-align: middle;
+   margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+   display: block;
+   font-weight: normal;
+   font-size: 20px;
+   line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+   color: #4e4e4d;
+   text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+   width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+   line-height: 20px;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: normal;
+   margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+   display: block;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+   margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background-color: #33383b;
+   border-radius: 2px;
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   line-height: 35px;
+   margin-right: 3px;
+   margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+   background-color: #4e4e4d;
+}
+
+.footer-links a:hover {
+   color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+       display: block;
+       width: 100%;
+       margin-bottom: 40px;
+       text-align: center;
+   }
+   .footer-distributed .footer-center i {
+       margin-left: 0;
+   }
+}  
+
+
+
+
+
+
+
+
+
+
+/*Search bar*/
+.search-box{
+    border: 2px solid #4E4E4D;
+    margin-top: -90px;
+    position: absolute;
+    width: 600px;
+    background: #EDD8CF;
+    border-radius: 50px;
+}
+.row{
+    display:flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+input{
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    font-size: 18px;
+    color: #B8A9A8;
+}
+.buton{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+}
+.buton .fa-solid{
+    width: 25px;
+    color: #FFF7EA;
+    font-size: 30px;
+    cursor: pointer;
+}
+::placeholder{
+    color: #FFF7EA;
+}
+.result-box ul{
+    border-top: 2px solid #4E4E4D;
+    padding: 15px 10px;
+}
+.result-box li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.result-box ul li:hover{
+    background: #FBEFEA;
+}
+.result-box{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+@media only screen and (max-width: 768px) {
+        .search-box {
+            width: 60%; /* Adjust width for smaller screens */
+        }
+
+        input {
+            font-size: 14px; /* Decrease font size for smaller screens */
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .search-box {
+            width: 80%; /* Further adjust width for even smaller screens */
+        }
+
+        input {
+            font-size: 12px; /* Decrease font size for even smaller screens */
+        }
+    }
+
+
+    
+    .color-background{
+    border: 77px solid #EDD8CF;
+    margin-top: -50%;
+}
+@media (max-width: 768px) {
+  .color-background {
+    border: 77px solid #EDD8CF;
+    margin-top: -185%;
+  }
+}
+</style>
+<body>
+    
+    <main class="main-wrap">
+        <section class="showcase">
+            <div class="overlay">
+                <div class="head">
+                    <button class="toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="image-logo">
+                    <a href="Home.html"><img src="image/logo.jpg"></a>
+                </div>
+                <div class="box">
+    
+                    <div class="profile">
+                        <a href="account.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+    
+                    <div class="store">
+                       <a href="addtocart.html"><i class="fa-solid fa-store"></i></a> 
+                    </div>
+    
+                </div>
+    
+                <div class="content">
+                    <div class="welcome">
+                        <div class="content-text">
+
+                            <div class="search-box">
+                                <div class="row">
+                                    <input type="text" id="input-box" placeholder="Search" autocomplete="off">
+                                    <a href="addtocart.html"><button class="buton"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                                </div>
+                                <div class="result-box">
+                                </div>
+                            </div>
+
+                            <br><br>
+                            <a href="addtocart.html"><img src="image/wall2.jpg"></a>
+
+                            <h3 id="faqs">FAQS</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+    <!---->
+    
+    <div class="paragraph">
+        <p>
+            FREQUENTLY ASKED QUESTIONS
+            <br><br>
+            Product Inquiries
+            <br><br>
+            Q: Are all Byte Beauty products cruelty-free?
+            <br>
+            A: Yes! All Byte Beauty products are thoughtfully 
+            made without harming nor testing on animals.
+            <br><br>
+            Q: Where are Byte Beauty products made?
+            <br>
+            A: Byte Beauty's products are made in the beauty capitals of the 
+            world: Korea, Taiwan, and Japan!
+            <br><br>
+            Q: Are all Byte Beauty products vegan?
+            <br>
+            A: Most Byte Beauty products are vegan. For more questions about our products, 
+            send us a message at shop@bytebeauty.com
+            <br><br>
+            Q; Is Byte Beauty FDA-certified?
+            <br>
+            A: Yes, All Byte Beauty products are FDA certified in the Philippines. 
+            You may verify this through the Philippine FDA website.
+            <br><br>
+            Q: Are Byte Beauty sun care products SPF tested?
+            <br>
+            A: Yes, All Byte Beauty SPF claims are true and backed by SPF 
+            testing conducted by our Korean and Taiwanese manufacturers.
+            <br><br>
+            Q: Are Byte Beauty products ingredients safe for sensitive skin?
+            <br>
+            A: Byte Beauty's products are formulated for all skin types and made with 
+            skin-caring ingredients to help protect and nourish the skin. If you have 
+            sensitive skin, we recommend conducting a patch test by applying a small 
+            amount of the product on your forearm.
+            <br>If you do not experience any redness or itching, this indicates that the 
+            product will not cause you allergies. If you have allergies to certain 
+            ingredients, you may send us a message at shop@bytebeauty.com so that we 
+            can check the ingredients.
+            <br><br>
+            Q: Are Byte Beauty products pregnancy-safe?
+            <br>
+            A: Most Byte Beauty products are pregnancy-safe. Please check with your 
+            doctor for ingredients to avoid during your pregnancy.
+            You may send us a message at shop@bytebeauty.com so that we can check 
+            the ingredients.
+            <br><br>
+            Q: How do I choose the right shade for my foundation or powder?
+            <br>
+            A: Our product listings contain visual shade guide matches for you 
+            to compare with your skin tone and undertone. Your skin tone is the 
+            main color of your skin, ranging from fair to deep skin. Your undertone 
+            is the natural shade within that color.
+            <br><br>
+            There are 3 common undertones: Warm, Neutral and Cool.
+            <br><br>
+            Q; For lip and cheek products, which shade should I choose?
+            <br>
+            A: All our shades have been formulated to match all skin tones. 
+            You may refer to our product listing shade guides for visual references.
+            <br><br>
+            Q: When does my makeup expire?
+            <br>
+            A: The best rule of thumb is to follow the period after opening which 
+            is usually 12 months for Byte Beauty products. Our manufacturing dates 
+            are placed on our packaging, with an average shelf life of 3 years.
+            <br><br>
+            For example, if the product was manufactured in January 2023, it must be 
+            opened on or before January 2025, so that it can be used within the 
+            recommended period after opening.
+            <br><br>
+            Q: What can you recommend for makeup beginners?
+            <br>
+            A: Byte Beauty has a wide assortment of multi-purpose, lightweight, 
+            and long-wearing makeup - perfect for beginners! Try the Second Skin 
+            Matte Serum Cushion Foundation SPFis for a light, on-the-go face base 
+            and the Lip Mallow Tints for a soft-matte pigment you can use on your 
+            lips, cheeks, and lids.
+            <br><br>
+            Q: What can you recommend for skincare beginners?
+            <br>
+            A: The most important skincare steps are cleansing, hydrating, and sun 
+            protection. Start with a gentle cleanser like our Hyaluronic Soothing 
+            Cleansing Gel, hydrate with our Hyaluronic + B3 Boost Water Cream, and 
+            protect your skin with our Hyaluronic Sun Serum SPFso+ PA++++.
+            <br><br>
+            Q: Can you notify me when an out of stock product is back in stock?
+            <br>
+            A: Please click the 'notify me' button on the corresponding product listing, 
+            and input your email address so we can send a notification once the product 
+            is back in stock.
+            <br><br>
+            Q: I can't find the product I am looking for, is it discontinued?
+            <br>
+            A: For more questions about our products, send us a message at shop@bytebeauty.com
+        </p>
+         
+        <div class="shipping">
+            <img src="image/Shippings.jpg" alt="Shipping Table" width="100%" height="100%">
+        </div>
+    
+    </div>
+    <div class="paragraph1">
+        <p>
+            FREQUENTLY ASKED QUESTIONS
+            <br><br>
+            Product Inquiries
+            <br><br>
+            Q: Are all Byte Beauty products cruelty-free?
+            <br>
+            A: Yes! All Byte Beauty products are thoughtfully 
+            made without harming nor testing on animals.
+            <br><br>
+            Q: Where are Byte Beauty products made?
+            <br>
+            A: Byte Beauty's products are made in the beauty capitals of the 
+            world: Korea, Taiwan, and Japan!
+            <br><br>
+            Q: Are all Byte Beauty products vegan?
+            <br>
+            A: Most Byte Beauty products are vegan. For more questions about our products, 
+            send us a message at shop@bytebeauty.com
+            <br><br>
+            Q; Is Byte Beauty FDA-certified?
+            <br>
+            A: Yes, All Byte Beauty products are FDA certified in the Philippines. 
+            You may verify this through the Philippine FDA website.
+            <br><br>
+            Q: Are Byte Beauty sun care products SPF tested?
+            <br>
+            A: Yes, All Byte Beauty SPF claims are true and backed by SPF 
+            testing conducted by our Korean and Taiwanese manufacturers.
+            <br><br>
+            Q: Are Byte Beauty products ingredients safe for sensitive skin?
+            <br>
+            A: Byte Beauty's products are formulated for all skin types and made with 
+            skin-caring ingredients to help protect and nourish the skin. If you have 
+            sensitive skin, we recommend conducting a patch test by applying a small 
+            amount of the product on your forearm.
+            <br>If you do not experience any redness or itching, this indicates that the 
+            product will not cause you allergies. If you have allergies to certain 
+            ingredients, you may send us a message at shop@bytebeauty.com so that we 
+            can check the ingredients.
+            <br><br>
+            </p>
+            <p class="paragraph2">
+            Q: Are Byte Beauty products pregnancy-safe?
+            <br>
+            A: Most Byte Beauty products are pregnancy-safe. Please check with your 
+            doctor for ingredients to avoid during your pregnancy.
+            You may send us a message at shop@bytebeauty.com so that we can check 
+            the ingredients.
+            <br><br>
+            Q: How do I choose the right shade for my foundation or powder?
+            <br>
+            A: Our product listings contain visual shade guide matches for you 
+            to compare with your skin tone and undertone. Your skin tone is the 
+            main color of your skin, ranging from fair to deep skin. Your undertone 
+            is the natural shade within that color.
+            <br><br>
+            There are 3 common undertones: Warm, Neutral and Cool.
+            <br><br>
+            Q; For lip and cheek products, which shade should I choose?
+            <br>
+            A: All our shades have been formulated to match all skin tones. 
+            You may refer to our product listing shade guides for visual references.
+            <br><br>
+            Q: When does my makeup expire?
+            <br>
+            A: The best rule of thumb is to follow the period after opening which 
+            is usually 12 months for Byte Beauty products. Our manufacturing dates 
+            are placed on our packaging, with an average shelf life of 3 years.
+            <br><br>
+            For example, if the product was manufactured in January 2023, it must be 
+            opened on or before January 2025, so that it can be used within the 
+            recommended period after opening.
+            <br><br>
+            Q: What can you recommend for makeup beginners?
+            <br>
+            A: Byte Beauty has a wide assortment of multi-purpose, lightweight, 
+            and long-wearing makeup - perfect for beginners! Try the Second Skin 
+            Matte Serum Cushion Foundation SPFis for a light, on-the-go face base 
+            and the Lip Mallow Tints for a soft-matte pigment you can use on your 
+            lips, cheeks, and lids.
+            <br><br>
+            Q: What can you recommend for skincare beginners?
+            <br>
+            A: The most important skincare steps are cleansing, hydrating, and sun 
+            protection. Start with a gentle cleanser like our Hyaluronic Soothing 
+            Cleansing Gel, hydrate with our Hyaluronic + B3 Boost Water Cream, and 
+            protect your skin with our Hyaluronic Sun Serum SPFso+ PA++++.
+            <br><br>
+            Q: Can you notify me when an out of stock product is back in stock?
+            <br>
+            A: Please click the 'notify me' button on the corresponding product listing, 
+            and input your email address so we can send a notification once the product 
+            is back in stock.
+            <br><br>
+            Q: I can't find the product I am looking for, is it discontinued?
+            <br>
+            A: For more questions about our products, send us a message at shop@bytebeauty.com
+        </p>
+         
+        
+    
+    </div>
+    <!---->
+    
+    
+                
+    <!--footer-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a href="Home.html"><img src="image/logo.jpg"></a>
+            <h3>Byte<span> Beauty</span></h3>
+            <p class="footer-links">
+            <a href="Home.html">Home</a>
+            |
+            <a href="Home.html">About</a>
+            <br>
+            <a href="Home.html">contact</a>
+            |
+            <a href="faqs.html">FAQS</a>
+            <br>
+            <a href="privacypolicy.html">Privacy_Policy</a>
+            |
+            <a href="termsandconditions.html">terms&conditions</a>
+            </p>
+            <p class="footer-company-name">make ups <strong>Byte Beauty Developer</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <a href="https://www.bing.com/search?q=commonwealth+quezon+city+map&qs=NM&pq=quezon+city+commonwealth+maps&sc=10-29&cvid=74DA79CE641F4807876AB85304342565&FORM=QBRE&sp=1&lq=0"><i class="fa fa-map-marker"></i></a>
+                <p>Quezon-City</p>
+            </div>
+            <div>
+                <a href="Home.html"><i class="fa fa-phone"></i></a>
+                <p>+69-945-723-6268</p>
+            </div>
+            <div>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+                <p>kong@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h1>FOLLOW US</h1>
+            <br><br><br>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/byte.beauty"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/byte__beauty/?fbclid=IwZXh0bgNhZW0CMTAAAR143ihNoNyomjBb5rTD_kVxgvKHBKdsXHep4GqLAFOcJ_A7UZzOYQUWrXk_aem_AVgDzDT1K7_P2Up6jmKP37L4KggHRB-IkuS5BQ4ztPTxHkMMrkNR_vh_L-FTVkSCKX7mm7FqIO1BAjMCkNCvS6yq"> <i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://x.com/bytebeauty001?t=hKIB-vyOgzNxWMAKR7NtBA&s=09&fbclid=IwZXh0bgNhZW0CMTAAAR3WPeQbwbJZp5NNqOOw65qCTGmQLwKl7y8h44EvzJTH-hahkYZfG8yUxBU_aem_AVjR6XUjxbKYBhaPL5WEmtBtuBOr_2GuXvIwgEqiJFSsHKRug-3sm7v2zalY3TJAP4534714Vf3OocGoHqTotDjF"> <i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+            <p class="footer-company-about">
+                <br><br><br><br>
+                <strong>Copyright © Byte Beauty 2024</strong>
+            </p>
+        </div>
+    </footer>
+    <!--footer-->
+    
+    
+            </div>
+        </section>
+    
+    
+    
+        <header class="main-head">
+            <div class="main-nav">
+                <nav class="navbar">
+                    <div class="navbar-nav">
+                        <div class="title">
+                        <a href="#">
+                            <h3>
+                                <button class="toggler1">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                                <span class="title-text">Byte Beauty</span>
+                            </h3>
+                        </a>
+                        </div>
+                    <ul class="nav-list">
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="link-text">Home</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="addtocart.html" class="nav-link">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="link-text">Product</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="account.html" class="nav-link">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="link-text">Account</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span class="link-text">Login</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="privacypolicy.html" class="nav-link">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span class="link-text">Privacy_Policy</span>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-list-item">
+                                <a href="termsandconditions.html" class="nav-link">
+                                    <i class="fa-solid fa-asterisk"></i>
+                                    <span class="link-text">Terms&Conditions</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="faqs.html" class="nav-link">
+                                    <i class="fa-solid fa-question"></i>
+                                    <span class="link-text">FAQS</span>
+                                </a>
+                            </li>
+
+
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </main>
+
+
+    <div class="color-background"></div>
+
+    <script src="java-java/home_java.js"></script>
+
+
+
+    <script>
+        let availableKeywords = [
+            'latest collection',
+            'lipstick',
+            'skincare',
+            'eyes',
+            'face',
+            'bestseller',
+        ];
+
+        const resultsBox = document.querySelector(".result-box");
+        const inputBox = document.querySelector("#input-box");
+
+        inputBox.addEventListener("input", function(){
+            let result = [];
+            let input = inputBox.value;
+            if (input.length){
+                result = availableKeywords.filter((keyword)=>{
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            display(result);
+    
+            if(!result.length){
+                resultsBox.innerHTML = '';
+            }
+        });
+
+        function display(result){
+            const content = result.map((list)=>{
+                return "<li onclick=selectInput(this)>" + list + "</li>";
+            });
+            
+            resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>"; 
+        }
+    
+        function selectInput(list){
+            inputBox.value = list.innerHTML;
+            resultsBox.innerHTML = '';
+        }
+    </script>
+    
+</body>
+</html>

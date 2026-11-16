@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>acc</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quicksand;
+}
+
+@font-face{
+    font-family: quicksand;
+    src: url("style-style/Fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+    src: url("style-style/Fonts/Lustria/Lustria-Regular.ttf");
+    src: url("style-style/Fonts/Rosario/Rosario-VariableFont_wght.ttf");
+ }
+
+
+ #priv{
+    font-family: lustria;
+    color: #4E4E4D;
+ }
+
+body{
+    background-color: #FBEFEA;
+}
+a{
+    text-decoration: none;
+}
+.main-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.main-head{
+    width: 60px;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s ease-in-out;
+    visibility: hidden;
+}
+.main-wrap .main-head.active{
+    width: 15%;
+    visibility: visible;
+}
+.main-head .main-nav{
+    width: 100%;
+}
+.main-head .main-nav .navbar{
+    width: 100%;
+}
+.main-head .main-nav .navbar .navbar-nav .title{
+    padding: 15px 19px;
+    transition: .1s ease-in-out;
+}
+
+.main-head .main-nav .navbar .navbar-nav .title .toggler1{
+    color: #EDE6DC;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+.main-head .main-nav .navbar .navbar-nav .title .toggler1:hover{
+    background-color: #4E4E4D;
+}
+
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title{
+    padding: 15px 12px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3{
+    color: #FFF7EA;
+    font-family: quicksand;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+    position: relative;
+     /**/background-color: #B8A9A8;
+     border-radius: 10px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3 .title-text{
+    position: absolute;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+     /**/font-family: quicksand;
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title .title-text{
+    opacity: 1;
+    
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list{
+    margin: 0;
+    padding: 10px 10px;
+    /**/
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item{
+    list-style: none;
+    padding: 15px 10px;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #B8A9A8;
+    font-family: quicksand;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:last-child{
+    margin-bottom: 0;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:hover{
+    background: #4E4E4D;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link{
+    color: #FFF7EA;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    position: absolute;
+    top: 3px;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    opacity: 1;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link i{
+    margin-right: 5px;
+    font-size: 20px;
+}
+.showcase{
+    width: 97%;
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.showcase.width{
+    width: 80%;
+}
+.showcase .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.showcase .head{
+    padding: 13px 25px;
+}
+.showcase .head .toggler{
+    display: inline-block;
+    background: transparent;
+    border: none;
+    outline: 0;
+    color: #4e4e4d;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: .2s ease;
+    position: absolute;
+    top: 55px;
+    right: 45px;
+}
+.showcase .head .toggler:hover{
+    background: #B8A9A8;
+}
+.showcase .head .toggler i{
+    font-size: 30px;
+}
+.showcase .content{
+    text-align: center;
+   margin-bottom: 50px;
+}
+.showcase .content img {
+    border-radius: 50px;
+    margin-left: -300px;
+    margin-top: -10px;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    object-fit: cover;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .showcase .content img {
+        margin-left: -300px;
+        margin-top: -10px;
+        width: 1200px;
+        height: 500px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .showcase .content img {
+        margin-left: -40px;
+        margin-top: -10px;
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+    .showcase .content img {
+        margin-left: -130px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.showcase .content h3{
+    font-size: 45px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 55px;
+    text-transform: capitalize;
+    color: #fff7E8;
+}
+.showcase .content .welcome{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase .content .welcome .content-text{
+    width: 640px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-text {
+        text-align: center;
+    }
+
+    .content-text img {
+        max-width: 200%;
+        height: auto;
+        margin: 70px -200px ;
+        transition: max-width 0.5s ease, height 0.5s ease;
+    }
+
+    .content-text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        transition: font-size 0.5s ease;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .box{
+       display: flex;
+        position: absolute;
+        top: 65px;
+        right: 120px;
+    }
+    .image-logo img{
+        /**/
+        margin-left: 50px; 
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+    }
+    .box > i{
+        font-size: 20px;
+        color: #B8A9A8;
+    }
+    
+    .profile i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 250px;
+    }
+    .profile i:hover{
+        color: #B8A9A8;
+    }
+    .store i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .store i:hover{
+        color: #B8A9A8;
+    }
+
+
+
+
+
+    .con-body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF8EF;
+    margin: 0;
+    padding: 0;
+    color: #4e4e4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #EDD8CF;
+    border-radius: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-md-3,
+.col-md-9 {
+    padding: 15px;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #4e4e4d;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #FBEFEA;
+}
+
+.list-group-item {
+    padding: 15px 20px;
+    border: 0;
+    border-left: 5px solid transparent;
+    cursor: pointer;
+    background-color: #FBEFEA;
+    color: #4e4e4d;
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+.list-group-item.active {
+    background-color: #4e4e4d;
+    border-left-color: #EDD8CF;
+    color: #fff;
+}
+
+.list-group-item:hover {
+    background-color: #EDD8CF;
+}
+
+.card {
+    border: 1px solid #4e4e4d;
+    border-radius: 4px;
+    background-color: #FBEFEA;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 50px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #FFF8EF;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary {
+    margin-bottom: 10px;
+    background-color: #4e4e4d;
+    border-color: #4e4e4d;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #EDD8CF;
+    border-color: #4e4e4d;
+    color: #4e4e4d;
+}
+
+.btn-default {
+    background-color: #FFF8EF;
+    border-color: #EDD8CF;
+    color: #4e4e4d;
+}
+
+.btn-default:hover {
+    background-color: #4e4e4d;
+    border-color: #4e4e4d;
+    color: #fff;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: #4e4e4d;
+    color: #4e4e4d;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4e4e4d;
+    color: #fff;
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+}
+
+.switcher input {
+    margin-right: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+}
+
+.media img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.media-body {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.alert {
+    background-color: #FFF8EF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #4e4e4d;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.switcher-label {
+    margin-left: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Background Pattern */
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #FBEFEA 25%, transparent 25%),
+        linear-gradient(225deg, #FBEFEA 25%, transparent 25%),
+        linear-gradient(45deg, #FBEFEA 25%, transparent 25%),
+        linear-gradient(315deg, #FBEFEA 25%, #FFF8EF 25%);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Decorative Circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #EDD8CF;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.circle.large {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 10%;
+}
+
+.circle.medium {
+    width: 200px;
+    height: 200px;
+    top: 70%;
+    left: 70%;
+}
+
+.circle.small {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+
+    /*Footer style*/
+
+    footer {
+   margin-top: 50px; 
+   font-family: rosario;
+}
+
+@media (max-height:800px) {
+   footer {
+       position: static;
+   }
+   header {
+       padding-top: 40px;
+   }
+}
+
+.footer-distributed { 
+   background-color: #ede6dc;
+   box-sizing: border-box;
+   width: 103%;
+   text-align: left;
+   font: bold 16px sans-serif;
+   padding: 50px 50px 60px 50px;
+   position: absolute;
+   font-family: rosario;
+
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+   display: inline-block;
+   vertical-align: top;
+   font-family: rosario;
+
+}
+
+/* Footer left */
+.footer-distributed .footer-left img{
+   width: 100px;
+   height: 100px;
+   border-radius: 50px;
+}
+
+.footer-distributed .footer-left {
+   width: 30%;
+   font-family: rosario;
+
+}
+
+.footer-distributed h3 {
+   color: #4e4e4d;
+   font-family: rosario;
+   margin: 0;
+}
+
+
+.footer-distributed h3 span {
+   color: #4e4e4d;
+   font-family: rosario;
+}
+
+/* Footer li5ks */
+
+.footer-distributed .footer-links {
+   color: #4e4e4d;
+   margin: 20px 0 12px;
+   font-family: rosario;
+}
+
+.footer-distributed .footer-links a {
+   display: inline-block;
+   line-height: 1.8;
+   text-decoration: none;
+   color: inherit;
+   font-family: rosario;
+}
+
+.footer-distributed .footer-links a:hover{
+   color: #FFF7EA;
+}
+
+.footer-distributed .footer-company-name {
+   color: #4e4e4d;
+   font-size: 20px;
+   font-weight: normal;
+   margin: 0;
+   font-family: rosario;
+}
+.footer-distributed .footer-company-name strong {
+   color: #4e4e4d;
+   font-family: rosario;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+   width: 35%;
+}
+
+.footer-distributed .footer-center i {
+   background-color: #33383b;
+   color: #EDE6DC;
+   font-size: 25px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 42px;
+   margin: 10px 15px;
+   vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+   font-size: 25px;
+   line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+   display: inline-block;
+   color: #4e4e4d;
+   vertical-align: middle;
+   margin: 0;
+   font-family: rosario;
+}
+
+.footer-distributed .footer-center p span {
+   display: block;
+   font-weight: normal;
+   font-size: 20px;
+   line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+   color: #4e4e4d;
+   text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+   width: 30%;
+   font-family: rosario;
+}
+.footer-distributed .footer-right h1{
+    font-family: rosario;
+}
+
+.footer-distributed .footer-company-about {
+   line-height: 20px;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: normal;
+   margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+   display: block;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+.footer-distributed .footer-company-about strong{
+    font-family: rosario;
+}
+
+.footer-distributed .footer-icons {
+   margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background-color: #33383b;
+   border-radius: 2px;
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   line-height: 35px;
+   margin-right: 3px;
+   margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+   background-color: #4e4e4d;
+}
+
+.footer-links a:hover {
+   color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+       display: block;
+       width: 100%;
+       margin-bottom: 40px;
+       text-align: center;
+   }
+   .footer-distributed .footer-center i {
+       margin-left: 0;
+   }
+}     
+
+
+
+
+
+
+.color-background {
+    border: 70px solid #EDD8CF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -9999; /* Ensure it's above other content */
+    background-color: rgba(237, 216, 207, 0.9); /* Add some transparency */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+@media (max-width: 768px) {
+  .color-background {
+    margin-top: -185%;
+  }
+}
+@media (max-width: 768px) {
+  .color-background {
+    margin-top: 0; /* Reset margin for smaller screens */
+  }
+}
+@media (min-width: 768px) {
+  .color-background {
+    position: absolute; /* Change position to absolute for medium and large screens */
+  }
+}
+@media (max-width: 580px) {
+  .color-background {
+    position: absolute; /* Position the background color at the top of the page */
+  }
+}
+@media (max-width: 680px) {
+  .color-background {
+    position: absolute; /* Position the background color at the top of the page */
+  }
+}
+
+
+</style>
+<body>
+    <main class="main-wrap">
+        <section class="showcase">
+            <div class="overlay">
+                <div class="head">
+                    <button class="toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="image-logo">
+                    <a href="Home.html"><img src="image/logo.jpg"></a>
+                </div>
+                <div class="box">
+    
+                    <div class="profile">
+                        <a href="Home.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+    
+                    <div class="store">
+                       <a href="addtocart.html"><i class="fa-solid fa-store"></i></a> 
+                    </div>
+    
+                </div>
+    
+                <div class="content">
+                    <div class="welcome">
+                        <div class="content-text">
+
+                            
+
+                            <br><br>
+
+                            <h3 id="priv">Account</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+    <!---->
+    <div class="con-body">
+        <div class="background-pattern"></div>
+        <div class="circle large"></div>
+        <div class="circle medium"></div>
+        <div class="circle small"></div>
+        <div class="container">
+            <h4>Account settings</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-group">
+                        <li class="list-group-item active" data-toggle="tab" data-target="#account-general">General</li>
+                        <li class="list-group-item" data-toggle="tab" data-target="#account-change-password">Change password</li>
+                        <li class="list-group-item" data-toggle="tab" data-target="#account-info">Info</li>
+                        <li class="list-group-item" data-toggle="tab" data-target="#account-social-links">Social links</li>
+                        <li class="list-group-item" data-toggle="tab" data-target="#account-connections">Connections</li>
+                        <li class="list-group-item" data-toggle="tab" data-target="#account-notifications">Notifications</li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="account-general">
+                            <div class="card">
+                                <div class="card-body media align-items-center">
+                                    <img id="profile-picture" src="image/yrrejto.jpg" alt class="d-block ui-w-80">
+                                    <div class="media-body ml-4">
+                                        <label class="btn btn-outline-primary">
+                                            Upload new photo
+                                            <input type="file" class="account-settings-fileinput" hidden>
+                                        </label> &nbsp;
+                                        <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+                                        <div class="text-light small mt-1"></div>
+                                    </div>
+                                </div>
+                                <hr class="border-light m-0">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" class="form-control mb-1" value="Kong">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" class="form-control" value="Jerry ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">E-mail</label>
+                                        <input type="text" class="form-control mb-1" value="kongpmds2023@gmail.com">
+                                        <div class="alert alert-warning mt-3">
+                                            Your email is not confirmed. Please check your inbox.<br>
+                                            <a href="javascript:void(0)">Resend confirmation</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="account-change-password">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">Current password</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">New password</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Repeat new password</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="account-info">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">Bio</label>
+                                        <textarea class="form-control" rows="5">SE</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Birthday</label>
+                                        <input type="text" class="form-control" value="December 29, 2004">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Country</label>
+                                        <select class="form-control">
+                                            <option selected>Philippines</option>
+                                            <option>USA</option>
+                                            <option>China</option>
+                                            <option>Japan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4">Contacts</h6>
+                                    <div class="form-group">
+                                        <label class="form-label">Phone</label>
+                                        <input type="text" class="form-control" value="+63 969 459 139 60">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="account-social-links">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="form-label">Twitter</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Facebook</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Gmail</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Instagram</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Tiktok</label>
+                                        <input type="text" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="account-connections">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-primary">Connect to <strong>Twitter</strong></button>
+                                    <hr class="border-light my-3">
+                                    <button type="button" class="btn btn-primary">Connect to <strong>Google</strong></button>
+                                    <hr class="border-light my-3">
+                                    <button type="button" class="btn btn-primary">Connect to <strong>Facebook</strong></button>
+                                    <hr class="border-light my-3">
+                                    <button type="button" class="btn btn-primary">Connect to <strong>Instagram</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="account-notifications">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="mb-4">Activity</h6>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input" checked>
+                                            <span class="switcher-label">Email me when someone sends a message</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input" checked>
+                                            <span class="switcher-label">Email me when someone answers my questions</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input">
+                                            <span class="switcher-label">Email me when someone follows me</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <hr class="border-light m-0">
+                                <div class="card-body">
+                                    <h6 class="mb-4">Application</h6>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input" checked>
+                                            <span class="switcher-label">Sales and announcements</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input">
+                                            <span class="switcher-label">Weekly product updates</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="switcher">
+                                            <input type="checkbox" class="switcher-input" checked>
+                                            <span class="switcher-label">Weekly best sellers update</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right mt-3">
+                        <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+                        <button type="button" class="btn btn-default">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    
+    
+                
+    <!--footer-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a href="Home.html"><img src="image/logo.jpg"></a>
+            <h3>Byte<span> Beauty</span></h3>
+            <p class="footer-links">
+            <a href="Home.html">Home</a>
+            |
+            <a href="Home.html">About</a>
+            <br>
+            <a href="Home.html">contact</a>
+            |
+            <a href="faqs.html">FAQS</a>
+            <br>
+            <a href="privacypolicy.html">Privacy_Policy</a>
+            |
+            <a href="termsandconditions.html">terms&conditions</a>
+            </p>
+            <p class="footer-company-name">make ups <strong>Byte Beauty Developer</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <a href="https://www.bing.com/search?q=commonwealth+quezon+city+map&qs=NM&pq=quezon+city+commonwealth+maps&sc=10-29&cvid=74DA79CE641F4807876AB85304342565&FORM=QBRE&sp=1&lq=0"><i class="fa fa-map-marker"></i></a>
+                <p>Quezon-City</p>
+            </div>
+            <div>
+                <a href="Home.html"><i class="fa fa-phone"></i></a>
+                <p>+69-945-723-6268</p>
+            </div>
+            <div>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+                <p>kong@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h1>FOLLOW US</h1>
+            <br><br><br>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/byte.beauty"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/byte__beauty/?fbclid=IwZXh0bgNhZW0CMTAAAR143ihNoNyomjBb5rTD_kVxgvKHBKdsXHep4GqLAFOcJ_A7UZzOYQUWrXk_aem_AVgDzDT1K7_P2Up6jmKP37L4KggHRB-IkuS5BQ4ztPTxHkMMrkNR_vh_L-FTVkSCKX7mm7FqIO1BAjMCkNCvS6yq"> <i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://x.com/bytebeauty001?t=hKIB-vyOgzNxWMAKR7NtBA&s=09&fbclid=IwZXh0bgNhZW0CMTAAAR3WPeQbwbJZp5NNqOOw65qCTGmQLwKl7y8h44EvzJTH-hahkYZfG8yUxBU_aem_AVjR6XUjxbKYBhaPL5WEmtBtuBOr_2GuXvIwgEqiJFSsHKRug-3sm7v2zalY3TJAP4534714Vf3OocGoHqTotDjF"> <i class="fa-brands fa-square-twitter"></i></a>
+            </div>
+            <p class="footer-company-about">
+                <br><br><br><br>
+                <strong>Copyright © Byte Beauty 2024</strong>
+            </p>
+        </div>
+    </footer>
+    <!--footer-->
+    
+    
+            </div>
+        </section>
+    
+    
+    
+        <header class="main-head">
+            <div class="main-nav">
+                <nav class="navbar">
+                    <div class="navbar-nav">
+                        <div class="title">
+                        <a href="#">
+                            <h3>
+                                <button class="toggler1">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                                <span class="title-text">Byte Beauty</span>
+                            </h3>
+                        </a>
+                        </div>
+                    <ul class="nav-list">
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="link-text">Home</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="addtocart.html" class="nav-link">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="link-text">Product</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="account.html" class="nav-link">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="link-text">Account</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span class="link-text">Login</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="privacypolicy.html" class="nav-link">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span class="link-text">Privacy_Policy</span>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-list-item">
+                                <a href="termsandconditions.html" class="nav-link">
+                                    <i class="fa-solid fa-asterisk"></i>
+                                    <span class="link-text">Terms&Conditions</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="faqs.html" class="nav-link">
+                                    <i class="fa-solid fa-question"></i>
+                                    <span class="link-text">FAQS</span>
+                                </a>
+                            </li>
+
+
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </main>
+
+    <div class="color-background"></div>
+
+
+    <script src="java-java/home_java.js"></script>
+
+
+
+    <script>
+        let availableKeywords = [
+            'latest collection',
+            'lipstick',
+            'skincare',
+            'eyes',
+            'face',
+            'bestseller',
+        ];
+
+        const resultsBox = document.querySelector(".result-box");
+        const inputBox = document.querySelector("#input-box");
+
+        inputBox.addEventListener("input", function(){
+            let result = [];
+            let input = inputBox.value;
+            if (input.length){
+                result = availableKeywords.filter((keyword)=>{
+                    return keyword.toLowerCase().includes(input.toLowerCase());
+                });
+            }
+            display(result);
+    
+            if(!result.length){
+                resultsBox.innerHTML = '';
+            }
+        });
+
+        function display(result){
+            const content = result.map((list)=>{
+                return "<li onclick=selectInput(this)>" + list + "</li>";
+            });
+            
+            resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>"; 
+        }
+    
+        function selectInput(list){
+            inputBox.value = list.innerHTML;
+            resultsBox.innerHTML = '';
+        }
+    </script>
+
+
+
+<script>
+    document.querySelectorAll('.list-group-item').forEach(item => {
+        item.addEventListener('click', function () {
+            document.querySelectorAll('.list-group-item').forEach(i => i.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelector(this.getAttribute('data-target')).classList.add('active');
+        });
+    });
+
+    // Image upload preview script
+    document.querySelector('.account-settings-fileinput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-picture').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

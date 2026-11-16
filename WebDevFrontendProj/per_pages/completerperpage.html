@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Privacy Policy</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quicksand;
+}
+
+@font-face{
+    font-family: quicksand;
+    src: url("style-style/Fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+ }
+
+
+ #priv{
+    font-family: quicksand;
+    color: #4E4E4D;
+ }
+
+body{
+    background-color: #FBEFEA;
+}
+a{
+    text-decoration: none;
+}
+.main-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.main-head{
+    width: 60px;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    transition: .3s ease-in-out;
+    visibility: hidden;
+}
+.main-wrap .main-head.active{
+    width: 15%;
+    visibility: visible;
+}
+.main-head .main-nav{
+    width: 100%;
+}
+.main-head .main-nav .navbar{
+    width: 100%;
+}
+.main-head .main-nav .navbar .navbar-nav .title{
+    padding: 15px 19px;
+    transition: .1s ease-in-out;
+}
+
+.main-head .main-nav .navbar .navbar-nav .title .toggler1{
+    color: #EDE6DC;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+.main-head .main-nav .navbar .navbar-nav .title .toggler1:hover{
+    background-color: #4E4E4D;
+}
+
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title{
+    padding: 15px 12px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3{
+    color: #FFF7EA;
+    font-family: quicksand;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+    position: relative;
+     /**/background-color: #B8A9A8;
+     border-radius: 10px;
+}
+.main-head .main-nav .navbar .navbar-nav .title h3 .title-text{
+    position: absolute;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+     /**/
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title .title-text{
+    opacity: 1;
+    
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list{
+    margin: 0;
+    padding: 10px 10px;
+    /**/
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item{
+    list-style: none;
+    padding: 15px 10px;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #B8A9A8;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:last-child{
+    margin-bottom: 0;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item:hover{
+    background: #4E4E4D;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link{
+    color: #FFF7EA;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    position: absolute;
+    top: 3px;
+    left: 35px;
+    opacity: 0;
+    transition: .2s ease;
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link .link-text{
+    opacity: 1;
+}
+.main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item .nav-link i{
+    margin-right: 5px;
+    font-size: 20px;
+}
+.showcase{
+    width: 97%;
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.showcase.width{
+    width: 80%;
+}
+.showcase .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.showcase .head{
+    padding: 13px 25px;
+}
+.showcase .head .toggler{
+    display: inline-block;
+    background: transparent;
+    border: none;
+    outline: 0;
+    color: #4e4e4d;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: .2s ease;
+    position: absolute;
+    top: 55px;
+    right: 45px;
+}
+.showcase .head .toggler:hover{
+    background: #B8A9A8;
+}
+.showcase .head .toggler i{
+    font-size: 30px;
+}
+.showcase .content{
+    text-align: center;
+   margin-bottom: 50px;
+}
+
+.showcase .content h3{
+    font-size: 45px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 55px;
+    text-transform: capitalize;
+    color: #fff7E8;
+}
+.showcase .content .welcome{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase .content .welcome .content-text{
+    width: 640px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-text {
+        text-align: center;
+    }
+
+    .content-text img {
+        max-width: 200%;
+        height: auto;
+        margin: 70px -200px ;
+        transition: max-width 0.5s ease, height 0.5s ease;
+    }
+
+    .content-text h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        transition: font-size 0.5s ease;
+    }
+}
+
+
+
+
+
+
+
+
+    .box{
+       display: flex;
+        position: absolute;
+        top: 65px;
+        right: 120px;
+    }
+    .image-logo img{
+        /**/
+        margin-left: 50px; 
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+    }
+    .box > i{
+        font-size: 20px;
+        color: #B8A9A8;
+    }
+    
+    .profile i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 250px;
+    }
+    .profile i:hover{
+        color: #B8A9A8;
+    }
+    .store i{
+        color: #4E4E4D;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .store i:hover{
+        color: #B8A9A8;
+    }
+
+
+
+
+    /*per pages*/
+.perpage-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.product-container {
+    max-width: 1200px;
+    width: 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.product-details {
+    margin-top: 20px;
+}
+.product-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+.product-rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+.product-rating span {
+    font-size: 1.2rem;
+    color: #555;
+    margin-left: 10px;
+}
+.product-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin: 20px 0;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+.buy-now-btn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.buy-now-btn:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 107, 97, 0.3);
+}
+.related-products {
+    margin-top: 40px;
+    width: 100%;
+}
+.related-products h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.related-product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.related-product {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.related-product img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+.related-product p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+.related-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .related-product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .related-product {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    /*per pages*/
+
+
+
+
+
+
+
+
+
+
+    /*Footer style*/
+
+    footer {
+   margin-top: 50px; 
+}
+
+@media (max-height:800px) {
+   footer {
+       position: static;
+   }
+   header {
+       padding-top: 40px;
+   }
+}
+
+.footer-distributed { 
+   background-color: #ede6dc;
+   box-sizing: border-box;
+   width: 103%;
+   text-align: left;
+   font: bold 16px sans-serif;
+   padding: 50px 50px 60px 50px;
+   position: absolute;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+   display: inline-block;
+   vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left img{
+   width: 100px;
+   height: 100px;
+   border-radius: 50px;
+}
+
+.footer-distributed .footer-left {
+   width: 30%;
+}
+
+.footer-distributed h3 {
+   color: #4e4e4d;
+   font-family: normal 36px 'quicksand', cursive;
+   margin: 0;
+}
+
+
+.footer-distributed h3 span {
+   color: #4e4e4d;
+}
+
+/* Footer li5ks */
+
+.footer-distributed .footer-links {
+   color: #4e4e4d;
+   margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+   display: inline-block;
+   line-height: 1.8;
+   text-decoration: none;
+   color: inherit;
+}
+
+.footer-distributed .footer-links a:hover{
+    color: #FFF7EA;
+}
+
+.footer-distributed .footer-company-name {
+   color: #4e4e4d;
+   font-size: 20px;
+   font-weight: normal;
+   margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+   width: 35%;
+}
+
+.footer-distributed .footer-center i {
+   background-color: #33383b;
+   color: #EDE6DC;
+   font-size: 25px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 42px;
+   margin: 10px 15px;
+   vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+   font-size: 25px;
+   line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+   display: inline-block;
+   color: #4e4e4d;
+   vertical-align: middle;
+   margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+   display: block;
+   font-weight: normal;
+   font-size: 20px;
+   line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+   color: #4e4e4d;
+   text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+   width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+   line-height: 20px;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: normal;
+   margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+   display: block;
+   color: #4e4e4d;
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+   margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background-color: #33383b;
+   border-radius: 2px;
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   line-height: 35px;
+   margin-right: 3px;
+   margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+   background-color: #4e4e4d;
+}
+
+.footer-links a:hover {
+   color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+   .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+       display: block;
+       width: 100%;
+       margin-bottom: 40px;
+       text-align: center;
+   }
+   .footer-distributed .footer-center i {
+       margin-left: 0;
+   }
+}  
+
+
+</style>
+<body>
+    <main class="main-wrap">
+        <section class="showcase">
+            <div class="overlay">
+                <div class="head">
+                    <button class="toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="image-logo">
+                    <a href="Home.html"><img src="image/logo.jpg"></a>
+                </div>
+                <div class="box">
+    
+                    <div class="profile">
+                        <a href="Home.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+    
+                    <div class="store">
+                       <a href="addtocart.html"><i class="fa-solid fa-store"></i></a> 
+                    </div>
+    
+                </div>
+    
+                <div class="content">
+                    <div class="welcome">
+                        <div class="content-text">
+                            <h3 id="priv">Lips Collection</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+    <!---->
+    <div class="perpage-style">
+    <div class="product-container">
+        <div class="product">
+            <div class="product-image">
+                <img src="imagess/img1.jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h1 class="product-name">Product Name</h1>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5 (30 reviews)</span>
+                </div>
+                <p class="product-description">
+                    This is a brief description of the product. It provides essential information and highlights the key features of the product.
+                </p>
+                <button class="buy-now-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="related-products">
+            <h2>Related Products</h2>
+            <div class="related-product-list">
+                <div class="related-product">
+                    <img src="imagess/img1.jpg" alt="Related Product 1">
+                    <p>Related Product 1</p>
+                </div>
+                <div class="related-product">
+                    <img src="imagess/img2.webp" alt="Related Product 2">
+                    <p>Related Product 2</p>
+                </div>
+                <div class="related-product">
+                    <img src="imagess/img1.jpg" alt="Related Product 3">
+                    <p>Related Product 3</p>
+                </div>
+                <div class="related-product">
+                    <img src="imagess/img2.webp" alt="Related Product 4">
+                    <p>Related Product 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!---->
+    
+    
+                
+    <!--footer-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <a href="Home.html"><img src=""></a>
+            <h3>Byte<span> Beauty</span></h3>
+            <p class="footer-links">
+            <a href="Home.html">Home</a>
+            |
+            <a href="Home.html">About</a>
+            <br>
+            <a href="Home.html">contact</a>
+            |
+            <a href="faqs.html">FAQS</a>
+            <br>
+            <a href="privacypolicy.html">Privacy_Policy</a>
+            |
+            <a href="termsandconditions.html">terms&conditions</a>
+            </p>
+            <p class="footer-company-name">make ups <strong>Byte Beauty Developer</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <a href="https://www.bing.com/search?q=commonwealth+quezon+city+map&qs=NM&pq=quezon+city+commonwealth+maps&sc=10-29&cvid=74DA79CE641F4807876AB85304342565&FORM=QBRE&sp=1&lq=0"><i class="fa fa-map-marker"></i></a>
+                <p>Quezon-City</p>
+            </div>
+            <div>
+                <a href="Home.html"><i class="fa fa-phone"></i></a>
+                <p>+69-945-723-6268</p>
+            </div>
+            <div>
+                <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+                <p>kong@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <h1>FOLLOW US</h1>
+            <br><br><br>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"> <i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/"> <i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://twitter.com/"> <i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.youtube.com/?app"> <i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p class="footer-company-about">
+                <br><br><br><br>
+                <strong>Copyright © Byte Beauty 2024</strong>
+            </p>
+        </div>
+    </footer>
+    <!--footer-->
+    
+    
+            </div>
+        </section>
+    
+    
+    
+        <header class="main-head">
+            <div class="main-nav">
+                <nav class="navbar">
+                    <div class="navbar-nav">
+                        <div class="title">
+                        <a href="#">
+                            <h3>
+                                <button class="toggler1">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                                <span class="title-text">Byte Beauty</span>
+                            </h3>
+                        </a>
+                        </div>
+                    <ul class="nav-list">
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <span class="link-text">Home</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="addtocart.html" class="nav-link">
+                                    <i class="fa-solid fa-store"></i>
+                                    <span class="link-text">Product</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="link-text">About_Us</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="login.html" class="nav-link">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span class="link-text">Login</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="privacypolicy.html" class="nav-link">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span class="link-text">Privacy_Policy</span>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-list-item">
+                                <a href="termsandconditions.html" class="nav-link">
+                                    <i class="fa-solid fa-asterisk"></i>
+                                    <span class="link-text">Terms&Conditions</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="faqs.html" class="nav-link">
+                                    <i class="fa-solid fa-question"></i>
+                                    <span class="link-text">FAQS</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="shipping.html" class="nav-link">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                    <span class="link-text">Shipping&Return</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-list-item">
+                                <a href="Home.html" class="nav-link">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span class="link-text">Contact</span>
+                                </a>
+                            </li>
+
+
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </main>
+
+    <div class="color-background"></div>
+
+
+    <script src="java-java/home_java.js"></script>
+
+</body>
+</html>

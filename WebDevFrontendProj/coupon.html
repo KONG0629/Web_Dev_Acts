@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coupon/Vouchers</title>
+  <style>
+    html, html a {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    }
+
+    body {
+      background-color: #FFF8EF;
+      color: #4E4E4D;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 62.5%;
+      margin: 0;
+      padding: 2rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .container-coupon {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #FBEFEA;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .basket-module {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid #4E4E4D;
+      border-radius: 8px;
+      background-color: #FFF8EF;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.3s;
+      margin-bottom: 1.5rem;
+    }
+
+    .basket-module:hover {
+      background-color: #FBEFEA;
+      transform: translateY(-5px);
+    }
+
+    label {
+      margin-right: 0.8rem;
+      font-size: 1.4rem;
+      color: #4E4E4D;
+    }
+
+    .promo-code-field {
+      border: 1px solid #EDD8CF;
+      padding: 0.6rem;
+      text-transform: uppercase;
+      width: 200px;
+      margin-right: 0.8rem;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: border-color 0.2s linear;
+    }
+
+    .promo-code-field:hover,
+    .promo-code-field:focus {
+      border-color: #4E4E4D;
+    }
+
+    .promo-code-cta {
+      background-color: #4E4E4D;
+      color: #FFF8EF;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .promo-code-cta:hover,
+    .promo-code-cta:focus {
+      background-color: #4E4E4D;
+      transform: scale(1.05);
+    }
+
+    .summary-promo {
+      display: none;
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      color: #4E4E4D;
+    }
+
+    .voucher-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25%;
+      padding: 1rem;
+      background-color: #FFF8EF;
+      border: 1px solid #4E4E4D;
+      border-radius: 8px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 20px 15px #EDD8CF;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .voucher-popup h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #4E4E4D;
+    }
+
+    .voucher-popup p {
+      font-size: 1.2rem;
+      color: #4E4E4D;
+    }
+
+    .voucher-popup button {
+      margin-top: 1rem;
+      background-color: #4E4E4D;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .voucher-popup button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .show-popup {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .promo-codes {
+      position: absolute;
+      top: 23.5rem;
+      right: 1rem;
+      background-color: #FFF8EF;
+      border: 1px solid #4E4E4D;
+      border-radius: 50px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      color: #4E4E4D;
+    }
+
+    .promo-codes h2 {
+      margin: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .promo-codes ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .promo-codes li {
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .basket-module {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .promo-code-field {
+        width: calc(100% - 1rem);
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .promo-code-cta {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+      }
+      
+      .voucher-popup {
+        width: 20%;
+        padding: 1rem;
+      }
+
+      .voucher-popup h2 {
+        font-size: 1.1rem;
+      }
+
+      .voucher-popup p,
+      .voucher-popup button {
+        font-size: 1rem;
+      }
+
+      .promo-codes {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-coupon">
+    <div class="basket-module">
+      <label for="promo-code">Enter a Voucher/Promo code</label>
+      <input id="promo-code" type="text" name="promo-code" maxlength="10" class="promo-code-field">
+      <button class="promo-code-cta">Apply</button>
+      <div class="summary-promo">
+        &nbspPromo Applied: <span class="promo-value"></span>
+      </div>
+    </div>
+
+    <div class="voucher-popup" id="voucher-popup">
+      <h2>Special Offer!</h2>
+      <p>Use code <strong>VOUCHER20</strong> to get 20% off on your next purchase!</p>
+      <button onclick="closeVoucherPopup()">Close</button>
+    </div>
+  </div>
+
+  <div class="promo-codes">
+    <h2>Available Promo Codes</h2>
+    <ul>
+      <li>VOUCHER20 - 20% off</li>
+      <li>YURR - 5% off</li>
+      <li>EMG10 - 10% off</li>
+      <li>JGK20 - 20% off</li>
+      <li>AP5 - 10% off</li>
+      <li>ICG20 - 20% off</li>
+    </ul>
+  </div>
+
+  <script>
+    var promoCode;
+    var promoPrice;
+    var fadeTime = 300;
+    var exchangeRate = 70; // conversion rate from GBP to PHP
+
+    document.querySelector('.promo-code-cta').addEventListener('click', function () {
+      promoCode = document.getElementById('promo-code').value.toUpperCase();
+
+      var validPromoCodes = {
+        'VOUCHER20': 10,
+        'YURR': 5,
+        'EMG10': 10,
+        'JGK20': 20,
+        'AP5': 10,
+        'ICG20': 20
+      };
+
+      if (validPromoCodes[promoCode]) {
+        promoPrice = validPromoCodes[promoCode] * exchangeRate;
+        alert("Promo code applied: ₱" + promoPrice.toFixed(2) + " off");
+        document.querySelector('.summary-promo').style.display = 'block';
+        document.querySelector('.promo-value').textContent = '₱' + promoPrice.toFixed(2);
+      } else {
+        alert("Invalid Promo Code");
+        promoPrice = 0;
+        document.querySelector('.summary-promo').style.display = 'none';
+      }
+
+      recalculateCart(true);
+    });
+
+    function recalculateCart(onlyTotal) {
+      var subtotal = 7000; // subtotal in PHP for demonstration
+      var total = subtotal;
+
+      if (promoPrice) {
+        if (subtotal >= promoPrice) {
+          total -= promoPrice;
+        } else {
+          alert('Order must be more than ₱' + promoPrice.toFixed(2) + ' for Promo code to apply.');
+          document.querySelector('.summary-promo').style.display = 'none';
+        }
+      }
+
+      if (onlyTotal) {
+        console.log('Total after discount: ₱' + total.toFixed(2));
+      }
+    }
+
+    function showVoucherPopup() {
+      document.getElementById('voucher-popup').classList.add('show-popup');
+    }
+
+    function closeVoucherPopup() {
+      document.getElementById('voucher-popup').classList.remove('show-popup');
+    }
+
+    setInterval(showVoucherPopup, 10000);
+  </script>
+</body>
+
+</html>
