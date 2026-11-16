@@ -1,0 +1,138 @@
+/* Sidebar Styles */
+:root {
+    --primary: #83b4ff;
+    --secondary: #1a2130;
+    --danger: #d91656;
+    --white: #ffffff;
+    --neutral: #5a72a0;
+    --black: #000000;
+    --button: rgb(106, 106, 223);
+}
+
+.nav_sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary);
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: width 0.5s ease;
+}
+
+.nav_sidebar.collapsed {
+    width: 100px; /* Width when collapsed */
+}
+
+.nav_sidebar a {
+    text-align: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--white);
+    display: block;
+    transition: 0.3s;
+}
+
+.nav_sidebar a:hover {
+    color: var(--neutral);
+}
+
+.nav_sidebar .buttonside {
+    margin: 20px;
+    text-align: center;
+}
+
+.nav_sidebar .buttonside .btn {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav_sidebar .toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.nav_sidebar .toggle-btn:hover {
+    color: var(--neutral);
+}
+
+.nav_sidebar.collapsed .toggle-btn {
+    right: 15px; /* Adjust if needed when collapsed */
+}
+
+.nav_sidebar.collapsed a {
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    
+}
+
+.nav_sidebar.collapsed .buttonside .btn {
+    font-size: 14px;
+    display: none;
+}
+
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.5s, width 0.5s;
+}
+
+.content.collapsed {
+    margin-left: 80px; /* Adjust when sidebar is collapsed */
+    width: calc(100% - 80px); /* Adjust width when collapsed */
+}
+
+
+.container{
+    margin: 100px 0px 200px 50px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
